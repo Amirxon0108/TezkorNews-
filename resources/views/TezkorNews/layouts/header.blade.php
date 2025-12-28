@@ -38,7 +38,7 @@
 								New York, NY
 							</span>
 
-							<img class="m-b-1 m-rl-8" src="images/icons/icon-night.png" alt="IMG">
+							<img class="m-b-1 m-rl-8" src="{{ asset('TezkorNew/images/icons/icon-night.png') }}" alt="IMG">
 
 							<span>
 								HI 58° LO 56°
@@ -110,7 +110,7 @@
 								New York, NY
 							</span>
 
-							<img class="m-b-1 m-rl-8" src="images/icons/icon-night.png" alt="IMG">
+							<img class="m-b-1 m-rl-8" src="{{ asset('TezkorNew/images/icons/icon-night.png') }}" alt="IMG">
 
 							<span>
 								HI 58° LO 56°
@@ -222,12 +222,12 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="images/icons/logo-01.png" alt="LOGO"></a>
+					<a href="index.html"><img src="{{ asset('TezkorNew/images/icons/logo-01.png') }}" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
 				<div class="banner-header">
-					<a href="https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-magnews2/"><img src="images/banner-01.jpg" alt="IMG"></a>
+					<a href="https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-magnews2/"><img src="{{ asset('TezkorNew/images/banner-01.jpg') }}" alt="IMG"></a>
 				</div>
 			</div>	
 			

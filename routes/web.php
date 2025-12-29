@@ -25,6 +25,10 @@ Route::prefix("dashboard")->name('admin.')->middleware('auth')->group(function()
     Route::get('/404', function() { return view('admin.404'); })->name('404');
     Route::get('/login', function() {return view('admin.login');})->name('login');
     Route::get('/blank', function() {return view('admin.blank');})->name('blank');
+     Route::get('/comments', function() {return view('admin.comments');})->name('comments');
+      Route::get('/article', function() {return view('admin.article');})->name('article');
+       Route::get('/media', function() {return view('admin.media');})->name('media');
+        Route::get('/tables', function() {return view('admin.tables');})->name('tables');
     Route::get('/register', function() { return view('admin.register');})->name('register');
     Route::get('/forgot-password', function() { return view('admin.forgot-password');})->name('forgot-password');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

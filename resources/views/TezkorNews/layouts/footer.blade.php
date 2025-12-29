@@ -184,14 +184,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 
 <!--===============================================================================================-->	
-	<script src="{{ asset('TezkorNew/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ asset('assets/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <!--===============================================================================================-->
-	<script src="{{ asset('TezkorNew/vendor/animsition/js/animsition.min.js') }}"></script>
+	<script src="{{ asset('assets/vendor/animsition/js/animsition.min.js') }}"></script>
 <!--===============================================================================================-->
-	<script src="{{ asset('TezkorNew/vendor/bootstrap/js/popper.js') }}"></script>
-	<script src="{{ asset('TezkorNew/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('assets/vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <!--===============================================================================================-->
-	<script src="{{ asset('TezkorNew/js/main.js') }}"></script>
+	<script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 </html>

@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->unsignedBigInteger('role_id'); // Role jadvali bilan bog'lovchi ID
-            $table->string('username')->unique();
-            $table->string('avatar')->nullable();   
-            $table->timestamps();
-        });
+        Schema::create('users', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('email')->unique();
+    $table->string('password');
+    $table->unsignedBigInteger('role_id')->default(2); // Standart qiymat berish
+    $table->string('username')->unique()->nullable(); // Nullable qilish yoki formaga qo'shish
+    $table->string('avatar')->nullable();   
+    $table->timestamps();
+});
     }
 
     /**

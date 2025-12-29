@@ -5,23 +5,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{ asset('TezkorNew/images/icons/favicon.png')}}"/>
+	<link rel="icon" type="image/png" href="{{ asset('assets/images/icons/favicon.png')}}"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/fonts/iconic/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/iconic/css/material-design-iconic-font.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animate/animate.css')}}">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/css-hamburgers/hamburgers.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animsition/css/animsition.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/css/util.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/util.min.css')}}">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset('TezkorNew/css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css')}}">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -38,7 +38,7 @@
 								New York, NY
 							</span>
 
-							<img class="m-b-1 m-rl-8" src="{{ asset('TezkorNew/images/icons/icon-night.png') }}" alt="IMG">
+							<img class="m-b-1 m-rl-8" src="{{ asset('assets/images/icons/icon-night.png') }}" alt="IMG">
 
 							<span>
 								HI 58° LO 56°
@@ -90,7 +90,7 @@
 			<div class="wrap-header-mobile">
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="{{ asset('TezkorNew/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
+					<a href="index.html"><img src="{{ asset('assets/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
 				</div>
 
 				<!-- Button show menu -->
@@ -110,7 +110,7 @@
 								New York, NY
 							</span>
 
-							<img class="m-b-1 m-rl-8" src="{{ asset('TezkorNew/images/icons/icon-night.png') }}" alt="IMG">
+							<img class="m-b-1 m-rl-8" src="{{ asset('assets/images/icons/icon-night.png') }}" alt="IMG">
 
 							<span>
 								HI 58° LO 56°
@@ -222,12 +222,12 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="{{ asset('TezkorNew/images/icons/logo-01.png') }}" alt="LOGO"></a>
+					<a href="index.html"><img src="{{ asset('assets/images/icons/logo-01.png') }}" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
 				<div class="banner-header">
-					<a href="https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-magnews2/"><img src="{{ asset('TezkorNew/images/banner-01.jpg') }}" alt="IMG"></a>
+					<a href="https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-magnews2/"><img src="{{ asset('assets/images/banner-01.jpg') }}" alt="IMG"></a>
 				</div>
 			</div>	
 			

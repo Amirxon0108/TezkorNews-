@@ -1,4 +1,5 @@
-
+@extends('admin.layouts.master')
+@section('content')
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -544,4 +545,4 @@
             </div>
             <!-- End of Main Content -->
 
-          
+          @endsection

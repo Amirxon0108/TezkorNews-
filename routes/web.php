@@ -14,8 +14,59 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+// Asosiy sahifalar guruhi
+Route::name('site.')->group(function () {
+    
+    Route::get('/', function () { 
+        return view('index'); // Sizdagi Home sahifasi
+    })->name('index');
+
+    Route::get('/news', function () { 
+        return view('TezkorNews.news'); 
+    })->name('news');
+
+    Route::get('/entertainment', function () { 
+        return view('TezkorNews.entertainment'); 
+    })->name('entertainment');
+
+    Route::get('/business', function () { 
+        return view('TezkorNews.news'); 
+    })->name('business');
+
+    Route::get('/travel', function () { 
+        return view('TezkorNews.news'); 
+    })->name('travel');
+
+    Route::get('/lifestyle', function () { 
+        return view('TezkorNews.news'); 
+    })->name('lifestyle');
+
+    Route::get('/video', function () { 
+        return view('TezkorNews.news'); 
+    })->name('video');
+
+    
+    Route::get('/about', function () { 
+        return view('TezkorNews.about'); 
+    })->name('about');
+    Route::get('/contact', function() {
+        return view('TezkorNews.contact');
+    })->name('contact');
+    Route::get('/blog-grid', function() {
+        return view('TezkorNews.blog-grid');
+    })->name('blog-grid');
+    Route::get('/blog-list-01', function() {
+        return view('TezkorNews.blog-list-01');
+    })->name('blog-list-01');
+    Route::get('/blog-list-02', function() {
+        return view('TezkorNews.blog-list-02');
+    })->name('blog-list-02');
+    Route::get('/blog-detail-01', function() {      
+        return view('TezkorNews.blog-detail-01');
+    })->name('blog-detail-01');
+    Route::get('/blog-detail-02', function() {      
+        return view('TezkorNews.blog-detail-02');
+    })->name('blog-detail-02'); 
 });
 
 

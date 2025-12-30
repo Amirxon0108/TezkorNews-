@@ -45,11 +45,11 @@
 							</span>
 						</span>
 
-						<a href="#" class="left-topbar-item">
+						<a href="{{route('site.about')}}" class="left-topbar-item">
 							About
 						</a>
 
-						<a href="#" class="left-topbar-item">
+						<a href="{{route('site.contact')}}" class="left-topbar-item">
 							Contact
 						</a>
 
@@ -119,11 +119,11 @@
 					</li>
 
 					<li class="left-topbar">
-						<a href="#" class="left-topbar-item">
+						<a href="{{route('site.about')}}" class="left-topbar-item">
 							About
 						</a>
 
-						<a href="#" class="left-topbar-item">
+						<a href="{{route('site.contact')}}" class="left-topbar-item">
 							Contact
 						</a>
 
@@ -161,11 +161,11 @@
 
 				<ul class="main-menu-m">
 					<li>
-						<a href="index.html">Home</a>
+						<a href="{{ route('site.index') }}">Home</a>
 						<ul class="sub-menu-m">
-							<li><a href="index.html">Homepage v1</a></li>
-							<li><a href="home-02.html">Homepage v2</a></li>
-							<li><a href="home-03.html">Homepage v3</a></li>
+							<li><a href="{{ route('site.index') }}">Homepage v1</a></li>
+							<li><a href="">Homepage v2</a></li>
+							<li><a href="">Homepage v3</a></li>
 						</ul>
 
 						<span class="arrow-main-menu-m">
@@ -174,41 +174,41 @@
 					</li>
 
 					<li>
-						<a href="category-01.html">News</a>
+						<a href="{{ route('site.news') }}">News</a>
 					</li>
 
 					<li>
-						<a href="category-02.html">Entertainment </a>
+						<a href="{{ route('site.entertainment') }}">Entertainment </a>
 					</li>
 
 					<li>
-						<a href="category-01.html">Business</a>
+						<a href="{{ route('site.news') }}">Business</a>
 					</li>
 
 					<li>
-						<a href="category-02.html">Travel</a>
+						<a href="{{ route('site.news') }}">Travel</a>
 					</li>
 
 					<li>
-						<a href="category-01.html">Life Style</a>
+						<a href="{{ route('site.news') }}">Life Style</a>
 					</li>
 
 					<li>
-						<a href="category-02.html">Video</a>
+						<a href="{{ route('site.news') }}">Video</a>
 					</li>
 
 					<li>
 						<a href="#">Features</a>
 						<ul class="sub-menu-m">
-							<li><a href="category-01.html">Category Page v1</a></li>
-							<li><a href="category-02.html">Category Page v2</a></li>
-							<li><a href="blog-grid.html">Blog Grid Sidebar</a></li>
-							<li><a href="blog-list-01.html">Blog List Sidebar v1</a></li>
-							<li><a href="blog-list-02.html">Blog List Sidebar v2</a></li>
-							<li><a href="blog-detail-01.html">Blog Detail Sidebar</a></li>
-							<li><a href="blog-detail-02.html">Blog Detail No Sidebar</a></li>
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="{{ route('site.news') }}">Category Page v1</a></li>
+							<li><a href="{{ route('site.news') }}">Category Page v2</a></li>
+							<li><a href="{{ route('site.blog-grid') }}">Blog Grid Sidebar</a></li>
+							<li><a href="{{ route('site.blog-list-01') }}">Blog List Sidebar v1</a></li>
+							<li><a href="{{ route('site.blog-list-02') }}">Blog List Sidebar v2</a></li>
+							<li><a href="{{ route('site.blog-detail-01') }}">Blog Detail Sidebar</a></li>
+							<li><a href="{{ route('site.blog-detail-02') }}">Blog Detail No Sidebar</a></li>
+							<li><a href="{{ route('site.about') }}">About Us</a></li>
+							<li><a href="{{ route('site.contact') }}">Contact Us</a></li>
 						</ul>
 
 						<span class="arrow-main-menu-m">
@@ -242,7 +242,7 @@
 
 						<ul class="main-menu">
 							<li class="main-menu-active">
-								<a href="index.html">Home</a>
+								<a href="{{route('site.index')}}">Home</a>
 								<ul class="sub-menu">
 									<li><a href="index.html">Homepage v1</a></li>
 									<li><a href="home-02.html">Homepage v2</a></li>
@@ -251,7 +251,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="category-01.html">News</a>
+								<a href="{{ route('site.news') }}">News</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -269,13 +269,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-05.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -300,13 +300,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-10.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -331,13 +331,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-14.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -362,13 +362,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-36.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -397,13 +397,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-50.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -428,13 +428,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-08.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -459,13 +459,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-07.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -490,13 +490,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-06.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -525,13 +525,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-21.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -556,13 +556,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-24.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -587,13 +587,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-22.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -618,13 +618,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-23.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -653,13 +653,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-25.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -684,13 +684,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-27.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -715,13 +715,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-26.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -746,13 +746,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-34.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -781,13 +781,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-35.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -812,13 +812,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-36.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -843,13 +843,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-37.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -874,13 +874,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-38.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -909,13 +909,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-39.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -940,13 +940,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-41.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -971,13 +971,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-42.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1002,13 +1002,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-40.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1036,7 +1036,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="category-02.html">Entertainment </a>
+								<a href="{{ route('site.news') }}">Entertainment </a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1051,13 +1051,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-25.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1082,13 +1082,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-27.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1113,13 +1113,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-26.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1144,13 +1144,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-34.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1179,13 +1179,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-35.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1210,13 +1210,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-36.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1241,13 +1241,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-37.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1272,13 +1272,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-38.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1307,13 +1307,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-39.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1338,13 +1338,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-41.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1369,13 +1369,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-42.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1400,13 +1400,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-40.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1434,7 +1434,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="category-01.html">Business</a>
+								<a href="{{ route('site.news') }}">Business</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1448,13 +1448,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-10.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1479,13 +1479,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-11.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1510,13 +1510,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-26.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1541,13 +1541,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-34.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1576,13 +1576,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-35.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1607,13 +1607,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-36.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1638,13 +1638,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-37.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1669,13 +1669,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-38.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1703,7 +1703,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="category-02.html">Travel</a>
+								<a href="{{ route('site.news') }}">Travel</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1717,13 +1717,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-39.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1748,13 +1748,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-41.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1779,13 +1779,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-42.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1810,13 +1810,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-40.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1845,13 +1845,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-35.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1876,13 +1876,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-36.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1907,13 +1907,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-37.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1938,13 +1938,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-38.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -1972,7 +1972,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="category-01.html">Life Style</a>
+								<a href="{{ route('site.news') }}">Life Style</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1985,13 +1985,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-25.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2016,13 +2016,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-27.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2047,13 +2047,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-26.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2078,13 +2078,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-34.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2112,7 +2112,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="category-02.html">Video</a>
+								<a href="{{ route('site.news') }}">Video</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -2125,13 +2125,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-50.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2156,13 +2156,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-08.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2187,13 +2187,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-07.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2218,13 +2218,13 @@
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
 															<img src="images/post-06.jpg" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
 																	Donec metus orci, malesuada et lectus vitae
 																</a>
 															</h5>
@@ -2254,15 +2254,15 @@
 							<li>
 								<a href="#">Features</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">Category Page v1</a></li>
-									<li><a href="category-02.html">Category Page v2</a></li>
-									<li><a href="blog-grid.html">Blog Grid Sidebar</a></li>
-									<li><a href="blog-list-01.html">Blog List Sidebar v1</a></li>
-									<li><a href="blog-list-02.html">Blog List Sidebar v2</a></li>
-									<li><a href="blog-detail-01.html">Blog Detail Sidebar</a></li>
-									<li><a href="blog-detail-02.html">Blog Detail No Sidebar</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="contact.html">Contact Us</a></li>
+									<li><a href="{{ route('site.news') }}">Category Page v1</a></li>
+									<li><a href="{{ route('site.news') }}">Category Page v2</a></li>
+									<li><a href="{{ route('site.blog-grid') }}">Blog Grid `Sidebar`</a></li>
+									<li><a href="{{ route('site.blog-list-01') }}">Blog List Sidebar v1</a></li>
+									<li><a href="{{ route('site.blog-list-02') }}">Blog List Sidebar v2</a></li>
+									<li><a href="{{ route('site.blog-detail-01') }}">Blog Detail Sidebar</a></li>
+									<li><a href="{{ route('site.blog-detail-02') }}">Blog Detail No Sidebar</a></li>
+									<li><a href="{{ route('site.about') }}">About Us</a></li>
+									<li><a href="{{ route('site.contact') }}">Contact Us</a></li>
 								</ul>
 							</li>
 						</ul>

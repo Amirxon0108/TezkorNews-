@@ -20,7 +20,7 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.comments.create');
     }
 
     /**

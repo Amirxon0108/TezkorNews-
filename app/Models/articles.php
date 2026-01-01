@@ -57,7 +57,7 @@ public function scopePublished($query)
 public function getReadingTimeAttribute()
 {
     $words = str_word_count(strip_tags($this->body));
-    $minutes = ceil($words / 200); // O'rtacha 200 ta so'z/daqiqa
+    $minutes = ceil($words / 100); // O'rtacha 100 ta so'z/daqiqa
     return $minutes . ' daqiqa o`qish';
 }
 }

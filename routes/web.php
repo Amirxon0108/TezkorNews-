@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -88,5 +91,8 @@ Route::prefix("dashboard")->name('admin.')->middleware('auth')->group(function()
     Route::resource('products', ProductsController::class);
     Route::resource('ads', AdsController::class);
 });
+Route::resource('comments', CommentsController::class); 
+Route::resource('articles', ArticlesController::class);
+Route::resource('media', MediaController::class);
 
 require __DIR__.'/auth.php';

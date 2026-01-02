@@ -1,69 +1,83 @@
 @extends('admin.layouts.master')
+@section('title', 'Articles Table')
 @section('content')
+<div class="container-fluid">
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="h3 text-gray-800">Articles</h1>
+            <p class="mb-0 text-muted">Manage all your articles from the table below. 
+            For more info about DataTables, visit <a href="https://datatables.net" target="_blank">DataTables documentation</a>.</p>
+        </div>
+        <a href="{{ route('articles.create') }}" class="btn btn-success btn-sm">+ Add Article</a>
+    </div>
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
-
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Donna Snider</td>
-                                            <td>Customer Support</td>
-                                            <td>New York</td>
-                                            <td>27</td>
-                                            <td>2011/01/25</td>
-                                            <td>$112,000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
+    <!-- DataTables Example -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header py-3 bg-primary">
+            <h6 class="m-0 font-weight-bold text-white">Articles List</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Excerpt</th>
+                            <th>Status</th>
+                            <th>Published Date</th>
+                            <th>Body</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tfoot class="table-light">
+                        <tr>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Excerpt</th>
+                            <th>Status</th>
+                            <th>Published Date</th>
+                            <th>Body</th>
+                            <th>Actions</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach($articles as $article)
+                        <tr>
+                            <td>{{ $article->title }}</td>
+                            <td>
+                                @if($article->thumbnail)
+                                    <img src="{{ asset('storage/'.$article->thumbnail) }}" 
+                                         class="img-thumbnail" width="80" alt="Thumbnail">
+                                @else
+                                    <span class="text-muted">No image</span>
+                                @endif
+                            </td>
+                            <td>{{ \Illuminate\Support\Str::limit($article->excerpt, 50) }}</td>
+                            <td>
+                                <span class="badge {{ $article->status == 'published' ? 'bg-success' : 'bg-secondary' }}">
+                                    {{ ucfirst($article->status) }}
+                                </span>
+                            </td>
+                            <td>{{ \Carbon\Carbon::parse($article->published_at)->format('Y-m-d') }}</td>
+                            <td>{{ \Illuminate\Support\Str::limit(strip_tags($article->body), 50) }}</td>
+                            <td class="d-flex gap-1">
+                                <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ route('articles.show', $article->id) }}" class="btn btn-sm btn-info text-white">Show</a>
+                                <form action="{{ route('articles.destroy', $article->id) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div>
-                </div>
-            @endsection
+        </div>
+    </div>
+</div>
+@endsection

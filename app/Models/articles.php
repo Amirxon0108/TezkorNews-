@@ -23,7 +23,9 @@ class articles extends Model
     'meta_description', // SEO uchun tavsif
     'published_at',   // Chop etilgan sana
 ];  
+
 // Maqola muallifini olish
+
 public function author()
 {
     return $this->belongsTo(User::class, 'author_id');

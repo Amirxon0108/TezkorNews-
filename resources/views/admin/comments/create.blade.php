@@ -1,30 +1,55 @@
-@extends('admin.layouts.master') {{-- agar layout bo‘lsa --}}
+@extends('admin.layouts.master')
 
 @section('title', 'Create Comment')
 
 @section('content')
-<div class="box">
-    <h2>Create Comment</h2>
+<div class="container-fluid">
 
-    <form action="" method="POST" enctype="multipart/form-data">
-        @csrf
+    <h1 class="h3 mb-4 text-gray-800">Create Comment</h1>
 
-        <label>Title</label>
-        <input type="text" name="title" placeholder="Title kiriting">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
 
-        <label>Description</label>
-        <textarea name="description" placeholder="Description yozing"></textarea>
+            <div class="card shadow">
+                <div class="card-body">
 
-        <label>Status</label>
-        <select name="status">
-            <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
-        </select>
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        @csrf
 
-        <label>Image</label>
-        <input type="file" name="image">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Title kiriting">
+                        </div>
 
-        <button class="btn-create">Create</button>
-    </form>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea name="description" class="form-control" rows="4" placeholder="Description yozing"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select name="status" class="form-control">
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" name="image" class="form-control-file">
+                        </div>
+
+                        <button class="btn btn-primary">
+                            Create Comment
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 @endsection

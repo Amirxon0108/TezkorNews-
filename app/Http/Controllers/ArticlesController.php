@@ -14,8 +14,10 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = articles::with('category')->where('status', 'published')->orderBy('published_at', 'desc')->paginate(10);
-        return view('admin.article', compact('articles'));
+       $articles = articles::with('category')->orderBy('created_at', 'desc')->paginate(10);
+       return view('admin.articles.index', compact('articles'));
+
+       
     }
 
     /**
@@ -62,7 +64,7 @@ class ArticlesController extends Controller
     ]);
 
     // 4. Orqaga qaytarish
-    return redirect()->route('articles.index')->with('success', 'Maqola muvaffaqiyatli qo\'shildi!');
+    return redirect()->route('admin.articles.index')->with('success', 'Maqola muvaffaqiyatli qo\'shildi!');
 }
     /**
      * Display the specified resource.
@@ -115,18 +117,19 @@ class ArticlesController extends Controller
     // 6. Bazada yangilash
     $article->update($data);
 
-    return redirect()->route('articles.index')->with('success', 'Maqola muvaffaqiyatli yangilandi!');}  
+    return redirect()->route('admin.articles.index')->with('success', 'Maqola muvaffaqiyatli yangilandi!');}  
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(articles $article)
     {
+        
         if($article->thumbnail){
             Storage::disk('public')->delete($article->thumbnail);
 
             $article->delete();
-            return redirect()->route('admin.article')->with('success', 'Maqola muvaffaqiyatli o\'chirildi!');
+            return redirect()->route('admin.articles.index')->with('success', 'Maqola muvaffaqiyatli o\'chirildi!');
         }
         }
     }

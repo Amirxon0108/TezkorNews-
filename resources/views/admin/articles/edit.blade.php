@@ -12,7 +12,7 @@
                     <!-- Form bu yerda -->
                
 
-            <form action="{{ route('articles.update', $article->id) }}"
+            <form action="{{ route('admin.articles.update', $article->id) }}"
                   method="POST"
                   enctype="multipart/form-data">
                 @csrf

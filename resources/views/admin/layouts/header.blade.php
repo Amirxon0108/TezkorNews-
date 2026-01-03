@@ -94,27 +94,32 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
-
+             <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.articles.index')}}">
+                    <i class="fas fa-fw fa-newspaper"></i>
+                    <span>Articles</span></a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.reklama.index')}}">
+                    <i class="fas fa-fw fa-ad"></i>
+                    <span>Reklamalar</span></a>
+            </li>
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.tables')}}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Users</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.comments')}}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>comments</span></a>
+                <a class="nav-link" href="{{route('admin.comments.index')}}">
+                    <i class="fas fa-fw fa-comment"></i>
+                    <span>Comments</span></a>
             </li>
+           
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.article')}}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>articles</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.media')}}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>media</span></a>
+                <a class="nav-link" href="{{route('admin.media.index')}}">
+                    <i class="fas fa-fw fa-video"></i>
+                    <span>Media</span></a>
             </li>
             
 

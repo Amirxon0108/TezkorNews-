@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controller\HomeController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\MediaController;
@@ -21,13 +22,15 @@ use App\Http\Controllers\ReklamalarController;
 // Asosiy sahifalar guruhi
 Route::name('site.')->group(function () {
     
-    Route::get('/', function () { 
-        return view('index'); // Sizdagi Home sahifasi
-    })->name('index');
+  Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
+    // Batafsil ko'rish sahifasi (Slug bo'yicha)
+    Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');
     Route::get('/news', function () { 
         return view('TezkorNews.news'); 
     })->name('news');
+    Route::post('/comment/store', [CommentsController::class, 'store'])
+    ->name('comment.store');
 
     Route::get('/entertainment', function () { 
         return view('TezkorNews.entertainment'); 
@@ -89,9 +92,9 @@ Route::prefix("dashboard")->name('admin.')->middleware('auth')->group(function()
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('products', ProductsController::class);
-    Route::resource('ads', AdsController::class);
-    
-Route::resource('comments', CommentsController::class); 
+    Route::patch('comments/{id}/approved', [CommentsController::class, 'approve'])->name('comments.approve');
+
+Route::resource('comments', CommentsController::class)->only(['index', 'destroy', 'show', 'store']);
 Route::resource('articles', ArticlesController::class); 
 Route::resource('media', MediaController::class);
 Route::resource('reklama', ReklamalarController::class);

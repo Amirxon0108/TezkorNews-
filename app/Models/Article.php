@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class articles extends Model
+class Article extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -40,7 +40,8 @@ public function category()
 // Maqolaga tegishli izohlarni olish
 public function comments()
 {
-    return $this->hasMany(Comment::class);
+    // Faqat tasdiqlangan izohlar chiqishi uchun
+    return $this->hasMany(Comment::class)->where('is_approved', true)->latest();
 }
 
 // Maqolaga biriktirilgan teglar (Tags)

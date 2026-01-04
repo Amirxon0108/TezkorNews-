@@ -41,4 +41,14 @@
         </div>
     </div>
 </div>
+<hr>
+
+@foreach($article->comments as $comment)
+    <div class="media mb-4 border-bottom pb-2">
+        <div class="media-body">
+            <h6 class="mt-0"><strong>{{ $comment->user_name }}</strong> <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small></h6>
+            {{ $comment->body }}
+        </div>
+    </div>
+@endforeach
 @endsection

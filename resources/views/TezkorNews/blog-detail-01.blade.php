@@ -4,11 +4,11 @@
 	<div class="container">
 		<div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
-				<a href="index.html" class="breadcrumb-item f1-s-3 cl9">
+				<a href="{{ route('site.index') }}" class="breadcrumb-item f1-s-3 cl9">
 					Home 
 				</a>
 
-				<a href="blog-list-01.html" class="breadcrumb-item f1-s-3 cl9">
+				<a href="{{ route('site.blog-list-01') }}" class="breadcrumb-item f1-s-3 cl9">
 					Blog 
 				</a>
 
@@ -34,30 +34,32 @@
 					<div class="p-r-10 p-r-0-sr991">
 						<!-- Blog Detail -->
 						<div class="p-b-70">
-							<a href="#" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
-								Technology
+							<a href="" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
+								{{$article->category->category_slug}}
 							</a>
 
 							<h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
-								Nulla non interdum metus non laoreet nisi tellus eget aliquam lorem pellentesque
+								{{$article->title}}
 							</h3>
 							
 							<div class="flex-wr-s-s p-b-40">
 								<span class="f1-s-3 cl8 m-r-15">
 									<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-										by John Alvarado
+										{{$article->author->name}}
 									</a>
 
 									<span class="m-rl-3">-</span>
 
 									<span>
-										Feb 18
+										{{ $article->created_at->format('d M Y') }}
 									</span>
 								</span>
 
 								<span class="f1-s-3 cl8 m-r-15">
-									5239 Views
+									{{$article->views_count}} views
 								</span>
+								<span class="f1-s-3 cl8 m-r-15">O'qish vaqti: {{ $article->reading_time }}</span>
+
 
 								<a href="#" class="f1-s-3 cl8 hov-cl10 trans-03 m-r-15">
 									0 Comment
@@ -65,20 +67,20 @@
 							</div>
 
 							<div class="wrap-pic-max-w p-b-30">
-								<img src="images/blog-list-01.jpg" alt="IMG">
+								<img src="{{ asset('storage/' . $article->thumbnail) }}" alt="IMG">
 							</div>
 
 							<p class="f1-s-11 cl6 p-b-25">
-								Curabitur volutpat bibendum molestie. Vestibulum ornare gravida semper. Aliquam a dui suscipit, fringilla metus id, maximus leo. Vivamus sapien arcu, mollis eu pharetra vitae, condimentum in orci. Integer eu sodales dolor. Maecenas elementum arcu eu convallis rhoncus. Donec tortor sapien, euismod a faucibus eget, porttitor quis libero. 
-							</p>
+							{{$article->excerpt}}		
+						</p>
 
 							<p class="f1-s-11 cl6 p-b-25">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet est vel orci luctus sollicitudin. Duis eleifend vestibulum justo, varius semper lacus condimentum dictum. Donec pulvinar a magna ut malesuada. In posuere felis diam, vel sodales metus accumsan in. Duis viverra dui eu pharetra pellentesque. Donec a eros leo. Quisque sed ligula vitae lorem efficitur faucibus. Praesent sit amet imperdiet ante. Nulla id tellus auctor, dictum libero a, malesuada nisi. Nulla in porta nibh, id vestibulum ipsum. Praesent dapibus tempus erat quis aliquet. Donec ac purus id sapien condimentum feugiat.
-							</p>
+								{{$article->slug}}
+													</p>
 
 							<p class="f1-s-11 cl6 p-b-25">
-								Praesent vel mi bibendum, finibus leo ac, condimentum arcu. Pellentesque sem ex, tristique sit amet suscipit in, mattis imperdiet enim. Integer tempus justo nec velit fringilla, eget eleifend neque blandit. Sed tempor magna sed congue auctor. Mauris eu turpis eget tortor ultricies elementum. Phasellus vel placerat orci, a venenatis justo. Phasellus faucibus venenatis nisl vitae vestibulum. Praesent id nibh arcu. Vivamus sagittis accumsan felis, quis vulputate
-							</p>
+						{{$article->body}}	
+						</p>
 
 							<!-- Tag -->
 							<div class="flex-s-s p-t-12 p-b-15">
@@ -126,8 +128,52 @@
 								</div>
 							</div>
 						</div>
+<!-- Comments Section -->
+<div class="comments-section p-t-40">
+    <h4 class="f1-l-4 cl3 p-b-12">
+        Comments ({{ $comments->count() }})
+    </h4>
+
+    @forelse($comments as $comment)
+        <div class="comment-item flex-sb-s p-b-25">
+            <div class="comment-avatar">
+                <img src="https://ui-avatars.com/api/?name={{ urlencode($comment->user_name) }}&background=random&color=fff&size=50" alt="avatar" class="borad-50">
+            </div>
+
+            <div class="comment-content p-l-15">
+                <div class="flex-sb-s">
+                    <span class="f1-s-3 cl8">
+                        {{ $comment->user_name }}
+                    </span>
+                    <span class="f1-s-3 cl8">
+                        {{ $comment->created_at->format('d M Y H:i') }}
+                    </span>
+                </div>
+
+                <p class="f1-s-11 cl6 p-t-5">
+                    {{ $comment->body }}
+                </p>
+            </div>
+        </div>
+    @empty
+        <p class="cl8 f1-s-12">No comments yet. Be the first to comment!</p>
+    @endforelse
+</div>
 
 						<!-- Leave a comment -->
+					@if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+@endif
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 						<div>
 							<h4 class="f1-l-4 cl3 p-b-12">
 								Leave a Comment
@@ -137,19 +183,24 @@
 								Your email address will not be published. Required fields are marked *
 							</p>
 
-							<form>
-								<textarea class="bo-1-rad-3 bocl13 size-a-15 f1-s-13 cl5 plh6 p-rl-18 p-tb-14 m-b-20" name="msg" placeholder="Comment..."></textarea>
+							
+							<div class="card my-4">
+    <h5 class="card-header">Izoh qoldiring:</h5>
+    <div class="card-body">
+        <form action="{{ route('site.comment.store') }}" method="POST">
+            @csrf
+			 <input type="hidden" name="article_id" value="{{ $article->id }}">
+            <div class="form-group mb-2">
+                <input type="text" name="user_name" class="form-control" placeholder="Ismingiz" required>
+            </div>
+            <div class="form-group mb-2">
+                <textarea name="body" class="form-control" rows="3" placeholder="Fikringizni yozing..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Yuborish</button>
+        </form>
+    </div>
+</div>
 
-								<input class="bo-1-rad-3 bocl13 size-a-16 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="text" name="name" placeholder="Name*">
-
-								<input class="bo-1-rad-3 bocl13 size-a-16 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="text" name="email" placeholder="Email*">
-
-								<input class="bo-1-rad-3 bocl13 size-a-16 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="text" name="website" placeholder="Website">
-
-								<button class="size-a-17 bg2 borad-3 f1-s-12 cl0 hov-btn1 trans-03 p-rl-15 m-t-10">
-									Post Comment
-								</button>
-							</form>
 						</div>
 					</div>
 				</div>
@@ -161,7 +212,7 @@
 						<div class="p-b-60">
 							<div class="how2 how2-cl4 flex-s-c">
 								<h3 class="f1-m-2 cl3 tab01-title">
-									Category
+									Category	
 								</h3>
 							</div>
 

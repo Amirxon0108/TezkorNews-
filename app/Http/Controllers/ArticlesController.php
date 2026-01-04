@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\articles;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str; // Slug yasash uchun
 use Illuminate\Support\Facades\Storage; // Rasmni saqlash uchun
@@ -14,7 +14,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-       $articles = articles::with('category')->orderBy('created_at', 'desc')->paginate(10);
+       $articles = Article::with('category')->orderBy('created_at', 'desc')->paginate(10);
        return view('admin.articles.index', compact('articles'));
 
        
@@ -50,7 +50,7 @@ class ArticlesController extends Controller
     }
 
     // 3. Ma'lumotlarni bazaga saqlash
-    articles::create([
+    Article::create([
         'category_id' => $request->category_id,
         'author_id' => auth()->id() ?? 1, // Agar auth bo'lsa ID-si, yo'qsa 1
         'title' => $request->title,
@@ -72,7 +72,7 @@ class ArticlesController extends Controller
   public function show($id)
 {
     // Maqolani slug orqali qidiramiz va uning kategoriyasini ham qo'shib olamiz
-    $article = articles::findOrFail($id);
+    $article = Article::findOrFail($id);
     
     // Maqola ko'rilgan sayin sanoqni 1 taga oshiramiz
     $article->increment('views_count');
@@ -82,7 +82,7 @@ class ArticlesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
- public function edit(articles $article)  // singular va katta harf
+ public function edit(Article $article)  // singular va katta harf
 {
     $categories = Category::all();
     return view('admin.articles.edit', compact('article', 'categories'));
@@ -92,7 +92,7 @@ class ArticlesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, articles $article)
+    public function update(Request $request, Article $article)
     {
         $request->validate([
             'title' => 'required|max:255',
@@ -122,7 +122,7 @@ class ArticlesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(articles $article)
+    public function destroy(Article $article)
     {
         
         if($article->thumbnail){

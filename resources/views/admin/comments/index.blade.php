@@ -17,47 +17,46 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                       
-                                    </tbody>
-                                </table>
+                             <table class="table table-bordered shadow">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th>Ism</th>
+            <th>Maqola</th>
+            <th>Izoh</th>
+            <th>Vaqti</th>
+            <th>Status</th>
+            <th>Amallar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($comments as $comment)
+        <tr>
+            <td>{{ $comment->user_id }}</td>
+            <td><a href="#">{{ $comment->article->title }}</a></td>
+            <td>{{ Str::limit($comment->body, 50) }}</td>
+            <td>{{ $comment->created_at->format('d.m.Y H:i') }}</td>
+            <td>
+                <span class="badge {{ $comment->is_approved ? 'badge-success' : 'badge-warning' }}">
+                    {{ $comment->is_approved ? 'Tasdiqlangan' : 'Kutilmoqda' }}
+                </span>
+            </td>
+            <td>
+                @if(!$comment->is_approved)
+                    <form action="{{ route('admin.comments.approve', $comment->id) }}" method="POST" class="d-inline">
+                        @csrf @method('PATCH')
+                        <button class="btn btn-sm btn-success">Tasdiqlash</button>
+                    </form>
+                @endif
+                <form action="{{ route('admin.comments.destroy', $comment->id) }}" method="POST" class="d-inline">
+                    @csrf @method('DELETE')
+                    <button class="btn btn-sm btn-danger">O'chirish</button>
+                </form>
+                <a href="{{route('admin.comments.show', $comment->id)}}" class="btn btn-sm btn-info">Ko'rish</a>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
                             </div>
                         </div>
                     </div>

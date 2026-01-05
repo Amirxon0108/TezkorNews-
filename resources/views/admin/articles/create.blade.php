@@ -64,7 +64,7 @@
 
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="is_featured" name="is_featured" {{ old('is_featured') ? 'checked' : '' }}>
-                            <label class="form-check-label" for="is_featured">Muhim maqola (Featured)</label>
+                            <label class="form-check-label" for="is_featured" >Muhim maqola (Featured)</label>
                         </div>
 
                         <button type="submit" class="btn btn-success btn-block py-2 shadow">

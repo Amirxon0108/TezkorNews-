@@ -1,5 +1,16 @@
 @extends('TezkorNews.layouts.master')	
 @section('content')
+<style>
+ .reply-section { 
+    margin-left: 20px; /* Har bir daraja uchun surilish */
+    border-left: 1px dashed #ccc; 
+    padding-left: 15px; 
+    margin-top: 10px;
+}
+.comment-item {
+    margin-bottom: 25px;
+}
+</style>
 	<!-- Breadcrumb -->
 	<div class="container">
 		<div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
@@ -62,7 +73,7 @@
 
 
 								<a href="#" class="f1-s-3 cl8 hov-cl10 trans-03 m-r-15">
-									0 Comment
+									{{$article->comments->count()}} Comment
 								</a>
 							</div>
 
@@ -129,51 +140,25 @@
 							</div>
 						</div>
 <!-- Comments Section -->
-<div class="comments-section p-t-40">
-    <h4 class="f1-l-4 cl3 p-b-12">
-        Comments ({{ $comments->count() }})
+	<div class="comments-container p-t-40 p-b-40">
+    <h4 class="f1-l-4 cl3 p-b-20">
+        Izohlar ({{ $article->comments->count() }})
     </h4>
 
-    @forelse($comments as $comment)
-        <div class="comment-item flex-sb-s p-b-25">
-            <div class="comment-avatar">
-                <img src="https://ui-avatars.com/api/?name={{ urlencode($comment->user_name) }}&background=random&color=fff&size=50" alt="avatar" class="borad-50">
+    @if(session('success'))
+        <div class="alert alert-success border-0 shadow-sm">{{ session('success') }}</div>
+    @endif
+
+    <div class="comment-list">
+        @forelse($article->comments->where('parent_id', null) as $comment)
+            @include('partials.comments', ['comment' => $comment, 'article' => $article])
+        @empty
+            <div class="text-center p-t-20">
+                <p class="cl8 f1-s-12">Hozircha izohlar yo'q. Birinchi bo'lib fikr bildiring!</p>
             </div>
-
-            <div class="comment-content p-l-15">
-                <div class="flex-sb-s">
-                    <span class="f1-s-3 cl8">
-                        {{ $comment->user_name }}
-                    </span>
-                    <span class="f1-s-3 cl8">
-                        {{ $comment->created_at->format('d M Y H:i') }}
-                    </span>
-                </div>
-
-                <p class="f1-s-11 cl6 p-t-5">
-                    {{ $comment->body }}
-                </p>
-            </div>
-        </div>
-    @empty
-        <p class="cl8 f1-s-12">No comments yet. Be the first to comment!</p>
-    @endforelse
-</div>
-
-						<!-- Leave a comment -->
-					@if(session('success'))
-    <div class="alert alert-success">{{ session('success') }}</div>
-@endif
-
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+        @endforelse
     </div>
-@endif
+</div>
 						<div>
 							<h4 class="f1-l-4 cl3 p-b-12">
 								Leave a Comment
@@ -498,5 +483,17 @@
 			</div>
 		</div>
 	</section>
+	<script>
+function showReplyForm(id) {
+    // Hammasini yopish (ixtiyoriy)
+    document.querySelectorAll('.reply-form-container').forEach(el => el.style.display = 'none');
+    // Tanlanganni ochish
+    var form = document.getElementById('reply-form-' + id);
+    if (form) {
+        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+}
+</script>
 
 	@endsection
+	

@@ -17,6 +17,7 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +41,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-    ],
+        'web_user' =>[
+            'driver' => 'session',
+            'provider' =>'web_user',
+        ],
+    ],  
+
 
     /*
     |--------------------------------------------------------------------------
@@ -64,6 +70,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'web_user' =>[
+            'driver' => 'eloquent',
+            'model' => App\Models\WebUser::class,
+        ],                                                                                                      
 
         // 'users' => [
         //     'driver' => 'database',

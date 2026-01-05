@@ -1,6 +1,6 @@
 <?php
-
-use App\Http\Controller\HomeController;
+  use App\Http\Controllers\Auth\WebController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\MediaController;
@@ -19,7 +19,14 @@ use App\Http\Controllers\ReklamalarController;
 |
 */
 
-// Asosiy sahifalar guruhi
+// Web User Auth (Bularni guruhdan tashqariga yoki alohida nom bilan qo'ygan ma'qul)
+// Foydalanuvchilar (WebUser) uchun
+Route::get('/user-login', [WebController::class, 'showLogin'])->name('user.login');
+Route::post('/user-login', [WebController::class, 'login']);
+Route::get('/user-register', [WebController::class, 'showRegister'])->name('user.register');
+Route::post('/user-register', [WebController::class, 'register']);
+Route::post('/user-logout', [WebController::class, 'logout'])->name('user.logout');
+
 Route::name('site.')->group(function () {
     
   Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
@@ -50,9 +57,7 @@ Route::name('site.')->group(function () {
 
     Route::get('/video', function () { 
         return view('TezkorNews.news'); 
-    })->name('video');
-
-    
+    })->name('video');  
     Route::get('/about', function () { 
         return view('TezkorNews.about'); 
     })->name('about');
@@ -77,15 +82,12 @@ Route::name('site.')->group(function () {
 });
 
 
-Route::prefix("dashboard")->name('admin.')->middleware('auth')->group(function(){
-   Route::get('/', function() { return view('admin.index'); })->name('index');
+Route::prefix("dashboard")->name('admin.')->middleware('auth:web')->group(function(){
+    Route::get('/', function() { return view('admin.index'); })->name('index');
     Route::get('/charts', function() { return view('admin.charts'); })->name('charts');
     Route::get('/404', function() { return view('admin.404'); })->name('404');
     Route::get('/login', function() {return view('admin.login');})->name('login');
-    Route::get('/blank', function() {return view('admin.blank');})->name('blank');
-    
-    
-        Route::get('/tables', function() {return view('admin.tables');})->name('tables');
+    Route::get('/blank', function() {return view('admin.blank');})->name('blank');           Route::get('/tables', function() {return view('admin.tables');})->name('tables');
     Route::get('/register', function() { return view('admin.register');})->name('register');
     Route::get('/forgot-password', function() { return view('admin.forgot-password');})->name('forgot-password');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -93,11 +95,20 @@ Route::prefix("dashboard")->name('admin.')->middleware('auth')->group(function()
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('products', ProductsController::class);
     Route::patch('comments/{id}/approved', [CommentsController::class, 'approve'])->name('comments.approve');
-
-Route::resource('comments', CommentsController::class)->only(['index', 'destroy', 'show', 'store']);
-Route::resource('articles', ArticlesController::class); 
-Route::resource('media', MediaController::class);
-Route::resource('reklama', ReklamalarController::class);
+    Route::resource('comments', CommentsController::class)->only(['index', 'destroy', 'show']);
+    Route::resource('articles', ArticlesController::class); 
+    Route::resource('media', MediaController::class);
+    Route::resource('reklama', ReklamalarController::class);
 });
+// ADMIN LOGIN
+Route::get('/dashboard/login', function() {
+    return view('admin.login');
+})->name('admin.login');
+
+Route::post('/dashboard/login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
+
+// ADMIN LOGOUT
+Route::post('/dashboard/logout', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
+
 
 require __DIR__.'/auth.php';

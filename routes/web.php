@@ -17,16 +17,20 @@ use App\Http\Controllers\ReklamalarController;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+*/require __DIR__.'/auth.php';
 
 // Web User Auth (Bularni guruhdan tashqariga yoki alohida nom bilan qo'ygan ma'qul)
 // Foydalanuvchilar (WebUser) uchun
-Route::get('/user-login', [WebController::class, 'showLogin'])->name('user.login');
-Route::post('/user-login', [WebController::class, 'login']);
-Route::get('/user-register', [WebController::class, 'showRegister'])->name('user.register');
-Route::post('/user-register', [WebController::class, 'register']);
-Route::post('/user-logout', [WebController::class, 'logout'])->name('user.logout');
+// Foydalanuvchilar (WebUser) uchun - FAQAT kirmaganlar kirishi mumkin
+Route::middleware(['guest:web_user'])->group(function () {
+    Route::get('/user-login', [WebController::class, 'showLogin'])->name('user.login');
+    Route::post('/user-login', [WebController::class, 'user_login']); // Controllerdagi nomga e'tibor bering
+    Route::get('/user-register', [WebController::class, 'showRegister'])->name('user.register');
+    Route::post('/user-register', [WebController::class, 'user_register']);
+});
 
+// Logout faqat kirganlar uchun
+Route::post('/user-logout', [WebController::class, 'user_logout'])->name('user.logout')->middleware('auth:web_user');
 Route::name('site.')->group(function () {
     
   Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
@@ -82,7 +86,7 @@ Route::name('site.')->group(function () {
 });
 
 
-Route::prefix("dashboard")->name('admin.')->middleware('auth:web')->group(function(){
+Route::prefix("dashboard")->name('admin.')->middleware(['auth:web', 'verified'])->group(function(){
     Route::get('/', function() { return view('admin.index'); })->name('index');
     Route::get('/charts', function() { return view('admin.charts'); })->name('charts');
     Route::get('/404', function() { return view('admin.404'); })->name('404');
@@ -111,4 +115,3 @@ Route::post('/dashboard/login', [\App\Http\Controllers\Auth\AuthenticatedSession
 Route::post('/dashboard/logout', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
 
 
-require __DIR__.'/auth.php';

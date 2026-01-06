@@ -10,7 +10,7 @@ class Comment extends Model
     use HasFactory;
     protected $fillable = [
     'article_id',  
-    'user_id',    
+    'web_user_id',    
     'parent_id', 
     'body',        
     'is_approved', 
@@ -23,9 +23,9 @@ public function article()
 }
 
 
-public function user()
+public function webUser()
 {
-    return $this->belongsTo(User::class);
+    return $this->belongsTo(WebUser::class, 'web_user_id','id');
 }
 
 

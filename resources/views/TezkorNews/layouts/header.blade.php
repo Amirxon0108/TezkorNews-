@@ -31,60 +31,51 @@
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<div class="topbar">
-				<div class="content-topbar container h-100">
-					<div class="left-topbar">
-						<span class="left-topbar-item flex-wr-s-c">
-							<span>
-								New York, NY
-							</span>
+    <div class="content-topbar container h-100">
+        <div class="left-topbar">
+            <span class="left-topbar-item flex-wr-s-c">
+                <span>New York, NY</span>
+                <img class="m-b-1 m-rl-8" src="{{ asset('assets/images/icons/icon-night.png') }}" alt="IMG">
+                <span>HI 58° LO 56°</span>
+            </span>
 
-							<img class="m-b-1 m-rl-8" src="{{ asset('assets/images/icons/icon-night.png') }}" alt="IMG">
+            <a href="{{route('site.about')}}" class="left-topbar-item">About</a>
+            <a href="{{route('site.contact')}}" class="left-topbar-item">Contact</a>
 
-							<span>
-								HI 58° LO 56°
-							</span>
-						</span>
+            {{-- Agar foydalanuvchi tizimga kirgan bo'lsa --}}
+            @auth('web_user')
+                <div class="left-topbar-item flex-wr-s-c">
+                    <a href="#" class="cl10 m-r-15">
+                        <i class="fa fa-user m-r-5"></i> 
+                        <strong>{{ Auth::guard('web_user')->user()->name }}</strong>
+                    </a>
 
-						<a href="{{route('site.about')}}" class="left-topbar-item">
-							About
-						</a>
+                    <a href="{{ route('user.logout') }}" 
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                       class="f1-s-12 cl6 hov-cl10 trans-03">
+                        <i class="fa fa-sign-out-alt"></i> Chiqish
+                    </a>
 
-						<a href="{{route('site.contact')}}" class="left-topbar-item">
-							Contact
-						</a>
+                    <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            @else
+                {{-- Agar foydalanuvchi kirmagan bo'lsa --}}
+                <a href="{{ route('user.register') }}" class="left-topbar-item">Sign up</a>
+                <a href="{{ route('user.login') }}" class="left-topbar-item">Log in</a>
+            @endauth
+        </div>
 
-						<a href="#" class="left-topbar-item">
-							Sing up
-						</a>
-
-						<a href="#" class="left-topbar-item">
-							Log in
-						</a>
-					</div>
-
-					<div class="right-topbar">
-						<a href="#">
-							<span class="fab fa-facebook-f"></span>
-						</a>
-
-						<a href="#">
-							<span class="fab fa-twitter"></span>
-						</a>
-
-						<a href="#">
-							<span class="fab fa-pinterest-p"></span>
-						</a>
-
-						<a href="#">
-							<span class="fab fa-vimeo-v"></span>
-						</a>
-
-						<a href="#">
-							<span class="fab fa-youtube"></span>
-						</a>
-					</div>
-				</div>
-			</div>
+        <div class="right-topbar">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-pinterest-p"></span></a>
+            <a href="#"><span class="fab fa-vimeo-v"></span></a>
+            <a href="#"><span class="fab fa-youtube"></span></a>
+        </div>
+    </div>
+</div> 
 
 			<!-- Header Mobile -->
 			<div class="wrap-header-mobile">

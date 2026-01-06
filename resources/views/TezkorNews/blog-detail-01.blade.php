@@ -140,56 +140,84 @@
 							</div>
 						</div>
 <!-- Comments Section -->
-	<div class="comments-container p-t-40 p-b-40">
-    <h4 class="f1-l-4 cl3 p-b-20">
-        Izohlar ({{ $article->comments->count() }})
-    </h4>
+	<div class="p-t-20 p-b-20">
+    <button class="btn btn-outline-primary btn-block f1-s-2 text-uppercase" type="button" 
+            data-toggle="collapse" data-target="#commentsCollapse" 
+            aria-expanded="false" aria-controls="commentsCollapse">
+        <i class="fa fa-comments m-r-5"></i> 
+        Izohlarni ko'rish ({{ $article->comments->count() }})
+    </button>
+</div>
 
-    @if(session('success'))
-        <div class="alert alert-success border-0 shadow-sm">{{ session('success') }}</div>
-    @endif
+<div class="collapse" id="commentsCollapse">
+    <div class="comments-container p-all-25 bg-light border-radius-10 shadow-sm m-b-40">
+        <h4 class="f1-l-4 cl3 p-b-20 border-bottom">
+            Fikrlar
+        </h4>
 
-    <div class="comment-list">
-        @forelse($article->comments->where('parent_id', null) as $comment)
-            @include('partials.comments', ['comment' => $comment, 'article' => $article])
-        @empty
-            <div class="text-center p-t-20">
-                <p class="cl8 f1-s-12">Hozircha izohlar yo'q. Birinchi bo'lib fikr bildiring!</p>
+        @if(session('success'))
+            <div class="alert alert-success border-0 shadow-sm m-t-15">
+                <i class="fa fa-check-circle m-r-5"></i> {{ session('success') }}
             </div>
-        @endforelse
+        @endif
+
+        <div class="comment-list m-t-20">
+            @forelse($article->comments->where('parent_id', null) as $comment)
+                <div class="single-comment p-b-20 m-b-20 border-bottom-dashed">
+                    @include('partials.comments', ['comment' => $comment, 'article' => $article])
+                </div>
+            @empty
+                <div class="text-center p-t-30 p-b-30">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" width="50" class="opacity-05" alt="no comments">
+                    <p class="cl8 f1-s-12 m-t-10">Hozircha izohlar yo'q. Birinchi bo'lib fikr bildiring!</p>
+                </div>
+            @endforelse
+        </div>
     </div>
 </div>
-						<div>
-							<h4 class="f1-l-4 cl3 p-b-12">
-								Leave a Comment
-							</h4>
 
-							<p class="f1-s-13 cl8 p-b-40">
-								Your email address will not be published. Required fields are marked *
-							</p>
-
-							
-							<div class="card my-4">
-    <h5 class="card-header">Izoh qoldiring:</h5>
+<div class="card my-4 shadow-sm border-0">
+    <h5 class="card-header bg-white border-bottom f1-m-4 cl3">Izoh qoldiring:</h5>
     <div class="card-body">
-        <form action="{{ route('site.comment.store') }}" method="POST">
-            @csrf
-			 <input type="hidden" name="article_id" value="{{ $article->id }}">
-            <div class="form-group mb-2">
-                <input type="text" name="user_name" class="form-control" placeholder="Ismingiz" required>
+        @auth('web_user')
+            <form action="{{ route('site.comment.store') }}" method="POST">
+                @csrf
+                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                
+                <div class="form-group mb-3">
+                    <label class="f1-s-3 cl5">
+                        Javob beruvchi: <span class="cl2"><strong>{{ Auth::guard('web_user')->user()->name }}</strong></span>
+                    </label>
+                </div>
+                                    
+                <div class="form-group mb-3">
+                    <textarea name="body" class="form-control bo-1-rad-5 p-all-10" rows="3" placeholder="Fikringizni yozing..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary f1-s-12 text-uppercase">Yuborish</button>
+            </form>
+        @else
+            <div class="alert alert-info shadow-sm p-4 text-center border-0">
+                <h6 class="m-b-15 f1-m-4">Izoh qoldirish uchun tizimga kirishingiz kerak</h6>
+                <p class="f1-s-13 cl8 p-b-20">
+                    Fikringiz biz uchun muhim. Iltimos, ro'yxatdan o'ting yoki hisobingizga kiring.
+                </p>
+                <div class="flex-c-m">
+                    <a href="{{ route('user.login') }}" class="btn btn-sm btn-primary m-r-10 p-rl-20">
+                        <i class="fa fa-sign-in m-r-5"></i> Kirish
+                    </a>
+                    <a href="{{ route('user.register') }}" class="btn btn-sm btn-outline-secondary p-rl-20">
+                        <i class="fa fa-user-plus m-r-5"></i> Ro'yxatdan o'tish
+                    </a>
+                </div>
             </div>
-            <div class="form-group mb-2">
-                <textarea name="body" class="form-control" rows="3" placeholder="Fikringizni yozing..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Yuborish</button>
-        </form>
+        @endauth
     </div>
 </div>
 
-						</div>
-					</div>
-				</div>
-				
+</div> </div> 
+
+
 				<!-- Sidebar -->
 				<div class="col-md-10 col-lg-4 p-b-30">
 					<div class="p-l-10 p-rl-0-sr991 p-t-70">						
@@ -202,36 +230,14 @@
 							</div>
 
 							<ul class="p-t-35">
-								<li class="how-bor3 p-rl-4">
-									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										Fashion
-									</a>
-								</li>
-
-								<li class="how-bor3 p-rl-4">
-									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										Beauty
-									</a>
-								</li>
-
-								<li class="how-bor3 p-rl-4">
-									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										Street Style
-									</a>
-								</li>
-
-								<li class="how-bor3 p-rl-4">
-									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										Life Style
-									</a>
-								</li>
-
-								<li class="how-bor3 p-rl-4">
-									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										DIY & Crafts
-									</a>
-								</li>
-							</ul>
+    @foreach($categories as $cat)
+    <li class="how-bor3 p-rl-4">
+        <a href="" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+            {{ $cat->name }} ({{ $cat->articles_count }})
+        </a>
+    </li>
+    @endforeach
+</ul>
 						</div>
 
 						<!-- Archive -->
@@ -254,90 +260,21 @@
 										</span>
 									</a>
 								</li>
-
+								@foreach ($categories as $cat)
 								<li class="p-rl-4 p-b-19">
 									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
 										<span>
-											June 2018
+											{{$cat->created_at}}
 										</span>
 
 										<span>
-											(39)
+											({{$cat->articles_count}})
 										</span>
 									</a>
 								</li>
+								@endforeach
 
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											May 2018
-										</span>
-
-										<span>
-											(29)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											April  2018
-										</span>
-
-										<span>
-											(35)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											March 2018
-										</span>
-
-										<span>
-											(22)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											February 2018
-										</span>
-
-										<span>
-											(32)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											January 2018
-										</span>
-
-										<span>
-											(21)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											December 2017
-										</span>
-
-										<span>
-											(26)
-										</span>
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 
@@ -350,21 +287,22 @@
 							</div>
 
 							<ul class="p-t-35">
-								<li class="flex-wr-sb-s p-b-30">
-									<a href="#" class="size-w-10 wrap-pic-w hov1 trans-03">
-										<img src="images/popular-post-04.jpg" alt="IMG">
-									</a>
+								@foreach($popularArticles as $pop)
+<li class="flex-wr-sb-s p-b-30">
+    <a href="" class="size-w-10 wrap-pic-w hov1 trans-03">
+        {{-- Rasmni asset orqali chaqiramiz --}}
+        <img src="{{ asset('storage/' . $pop->thumbnail) }}" alt="{{ $pop->title }}">
+    </a>
 
-									<div class="size-w-11">
-										<h6 class="p-b-4">
-											<a href="blog-detail-02.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-												Donec metus orci, malesuada et lectus vitae
-											</a>
-										</h6>
-
-										<span class="cl8 txt-center p-b-24">
+    <div class="size-w-11">
+        <h6 class="p-b-4">
+            <a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
+                {{ $pop->title }}
+            </a>
+        </h6>
+		<span class="cl8 txt-center p-b-24">
 											<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-												Music
+												{{ $pop->category->name }}
 											</a>
 
 											<span class="f1-s-3 m-rl-3">
@@ -372,67 +310,15 @@
 											</span>
 
 											<span class="f1-s-3">
-												Feb 18
+												{{ $pop->created_at->format('M d') }}
 											</span>
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-30">
-									<a href="#" class="size-w-10 wrap-pic-w hov1 trans-03">
-										<img src="images/popular-post-05.jpg" alt="IMG">
-									</a>
-
-									<div class="size-w-11">
-										<h6 class="p-b-4">
-											<a href="blog-detail-02.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-												Donec metus orci, malesuada et lectus vitae
-											</a>
-										</h6>
-
-										<span class="cl8 txt-center p-b-24">
-											<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-												Game
-											</a>
-
-											<span class="f1-s-3 m-rl-3">
-												-
-											</span>
-
-											<span class="f1-s-3">
-												Feb 16
-											</span>
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-30">
-									<a href="#" class="size-w-10 wrap-pic-w hov1 trans-03">
-										<img src="images/popular-post-06.jpg" alt="IMG">
-									</a>
-
-									<div class="size-w-11">
-										<h6 class="p-b-4">
-											<a href="blog-detail-02.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-												Donec metus orci, malesuada et lectus vitae
-											</a>
-										</h6>
-
-										<span class="cl8 txt-center p-b-24">
-											<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-												Celebrity
-											</a>
-
-											<span class="f1-s-3 m-rl-3">
-												-
-											</span>
-
-											<span class="f1-s-3">
-												Feb 12
-											</span>
-										</span>
-									</div>
-								</li>
+										</span>	
+        <span class="cl8 txt-center p-b-24">
+            <span class="f1-s-3"></span>
+        </span>
+    </div>
+</li>
+@endforeach
 							</ul>
 						</div>
 

@@ -26,14 +26,14 @@ class ArticleCommentSeeder extends Seeder
         // 2. Ushbu maqolaga bir nechta izoh qo'shamiz
         Comment::create([
             'article_id'  => $article->id,
-            'user_id'     => 1,
+            'web_user_id'     => 1,
             'body'        => 'Ajoyib maqola bo`libdi, rahmat!',
             'is_approved' => true, // Tasdiqlangan izoh
         ]);
 
         Comment::create([
             'article_id'  => $article->id,
-            'user_id'     => 1,
+            'web_user_id'     => 1,
             'body'        => 'Yana shunaqa maqolalar kutib qolamiz.',
             'is_approved' => false, // Tasdiqlanmagan (Admin panelda ko'rinishi uchun)
         ]);

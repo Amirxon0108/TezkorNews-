@@ -22,13 +22,11 @@
                 <div class="item-slick3 p-b-70">
                     <div class="comments-list">
         <div class="comment-item flex-sb-s p-b-25">
-            {{$comment->user_id}}
+            {{ Auth::guard('web_user')->user()->name }}
 <br>
             <div class="comment-content p-l-15">
                 <div class="flex-sb-s">
-                    <span class="f1-s-3 cl8">
-                        {{ $comment->user_name }}
-                    </span>
+                    
                     <br>
                     <span class="f1-s-3 cl8">
                         {{ $comment->created_at->format('d M Y H:i') }}

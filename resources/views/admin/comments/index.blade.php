@@ -31,7 +31,7 @@
     <tbody>
         @foreach($comments as $comment)
         <tr>
-            <td>{{ $comment->user_id }}</td>
+            <td>{{ $comment->webUser->name }}</td>
             <td><a href="#">{{ $comment->article->title }}</a></td>
             <td>{{ Str::limit($comment->body, 50) }}</td>
             <td>{{ $comment->created_at->format('d.m.Y H:i') }}</td>

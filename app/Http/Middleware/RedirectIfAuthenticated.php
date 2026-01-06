@@ -15,16 +15,30 @@ class RedirectIfAuthenticated
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, string ...$guards): Response
-    {
-        $guards = empty($guards) ? [null] : $guards;
+public function handle(Request $request, Closure $next, string ...$guards): Response
+{
+    $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
+    foreach ($guards as $guard) {
+        if (Auth::guard($guard)->check()) {
+            
+            // AGAR so'rov user-login yoki user-register'ga bo'lsa, 
+            // admin kirgan bo'lsa ham unga bu sahifalarni ko'rishga ruxsat beramiz
+            if ($request->is('user-login') || $request->is('user-register')) {
+                return $next($request);
+            }
+
+            // Standart holatlar
+            if ($guard === 'web_user') {
+                return redirect('/');
+            }
+
+            if ($guard === 'web') {
                 return redirect(RouteServiceProvider::HOME);
             }
         }
-
-        return $next($request);
     }
+
+    return $next($request);
+}
 }

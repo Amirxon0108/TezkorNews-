@@ -11,7 +11,7 @@ class CommentsController extends Controller
     
     public function index()
     {
-        $comments = Comment::with('article', 'user')->latest()->get(); // 'user' bog'lanishini ham qo'shdik
+        $comments = Comment::with('article', 'webUser')->latest()->get(); // 'user' bog'lanishini ham qo'shdik
         return view('admin.comments.index', compact('comments'));
     }
 
@@ -32,7 +32,7 @@ class CommentsController extends Controller
      
         Comment::create([
             'article_id' => $request->article_id,
-            'user_id'    => Auth::guard('web_user')->id(), // WebUser ID sini olamiz
+            'web_user_id'    => Auth::guard('web_user')->id(), // WebUser ID sini olamiz
             'parent_id'  => $request->parent_id,
             'body'       => $request->body,
             'is_approved'=> false, // Admin tasdiqlashi uchun
@@ -51,7 +51,7 @@ class CommentsController extends Controller
 
     public function show($id)
     {
-        $comment = Comment::with('article', 'user')->findOrFail($id);
+        $comment = Comment::with('article', 'webUser')->findOrFail($id);
         return view('admin.comments.show', compact('comment'));
     }
 

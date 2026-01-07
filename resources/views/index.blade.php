@@ -36,28 +36,28 @@
 	<!-- Feature post -->
 	<section class="bg0">
 		<div class="container">
-			<div class="row m-rl--1">
+			<div class="row m-rl--1">@if(isset($articles[0]))
 				<div class="col-md-6 p-rl-1 p-b-2">
-					@foreach($articles as $article)
-					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $article->thumbnail) }});">
-						<a href="{{ route('site.article.show', $article->slug) }}"
+					
+					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[0]->thumbnail) }});">
+						<a href="{{ route('site.article.show', $articles[0]->slug) }}"
    class="dis-block how1-child1 trans-03"></a>
 
 							
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-							<a href="{{route('site.article.show', $article->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-								{{ $article->category->name }}
+							<a href="{{route('site.article.show', $articles[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+								{{ $articles[0]->category->name }}
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
-								<a href="{{route('site.article.show', $article->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
-									{{ $article->title }}
+								<a href="{{route('site.article.show', $articles[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+									{{ $articles[0]->title }}
 								</a>
 							</h3>
 
 							<span class="how1-child2">
 								<span class="f1-s-4 cl11">
-									{{ $article->author->name }}
+									{{ $articles[0]->author->name }}
 								</span>
 
 								<span class="f1-s-3 cl11 m-rl-3">
@@ -65,69 +65,74 @@
 								</span>
 
 								<span class="f1-s-3 cl11">
-									{{$article->created_at->format('d M Y')}}
+									{{$articles[0]->created_at->format('d M Y')}}
 								</span>
 							</span>
 						</div>
 					</div>
-					@endforeach
+					
 				</div>
-
+@endif
+@if(isset($articles[1]))
 				<div class="col-md-6 p-rl-1">
 					<div class="row m-rl--1">
 						<div class="col-12 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url({{ asset('TezkorNews/images/post-02.jpg') }});">
-								<a href="{{route('site.article.show', $article->slug)}}" class="dis-block how1-child1 trans-03">sasfas</a>
+							<div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[1]->thumbnail) }});">
+								<a href="{{ route('site.article.show', $articles[1]->slug) }}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-24">
-									<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										Culture
+									<a href="{{ route('site.article.show', $articles[1]->slug) }}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{$articles[1]->category->name}}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
-											London ipsum dolor sit amet, consectetur adipiscing elit.
+										<a href="{{ route('site.article.show', $articles[1]->slug) }}" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
+											{{ $articles[1]->title }}
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
-
+@endif
+@if(isset($articles[2]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url({{ asset('TezkorNews/images/post-03.jpg') }});">
-								<a href="" class="dis-block how1-child1 trans-03"></a>
+						<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[2]->thumbnail) }});">
+								<a href="{{ route('site.article.show', $articles[2]->slug) }}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										Life Style
+									<a href="{{ route('site.article.show', $articles[2]->slug) }}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $articles[2]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											Pellentesque dui nibh, pellen-tesque ut dapibus ut
+										<a href="{{ route('site.article.show', $articles[2]->slug) }}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $articles[2]->title }}
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
-
+@endif
+@if(isset($articles[3]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url({{ asset('TezkorNews/images/post-04.jpg') }});">
-								<a href="" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[3]->thumbnail) }});">
+								<a href="{{ route('site.article.show', $articles[3]->slug) }}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										Sport
+									<a href="{{ route('site.article.show', $articles[3]->slug) }}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $articles[3]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											Motobike Vestibulum vene-natis purus nec nibh volutpat
+										<a href="{{ route('site.article.show', $articles[3]->slug) }}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $articles[3]->title }}
+										
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -198,7 +203,7 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('TezkorNew/images/post-05.jpg') }}" alt="IMG">
+													<img src="{{ asset('assets/images/post-05.jpg') }}" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
@@ -229,7 +234,7 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-06.jpg" alt="IMG">
+													<img src="{{ asset('assets/images/post-06.jpg') }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
@@ -258,7 +263,7 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-07.jpg" alt="IMG">
+													<img src="{{ asset('assets/images/post-07.jpg') }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
@@ -287,7 +292,7 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-08.jpg" alt="IMG">
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">	
 												</a>
 
 												<div class="size-w-2">
@@ -323,7 +328,7 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-09.jpg" alt="IMG">
+													<img src="{{ asset('assets/images/post-09.jpg') }}" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
@@ -354,7 +359,7 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-08.jpg" alt="IMG">
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
@@ -383,8 +388,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-06.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -412,8 +417,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-07.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -448,8 +453,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-08.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -479,8 +484,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-07.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -508,8 +513,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-06.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -537,8 +542,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-05.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -573,8 +578,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-06.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -604,8 +609,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-09.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -633,8 +638,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-07.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -662,8 +667,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-08.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -698,8 +703,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-07.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -729,8 +734,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-08.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -758,8 +763,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-06.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -787,8 +792,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-09.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -872,8 +877,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-10.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -903,8 +908,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-11.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -932,8 +937,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-12.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -961,8 +966,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-13.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -997,8 +1002,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-13.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1028,8 +1033,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-12.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1057,8 +1062,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-11.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1086,8 +1091,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-10.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1122,8 +1127,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-11.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1153,8 +1158,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-12.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1182,8 +1187,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-13.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1211,8 +1216,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-10.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1247,8 +1252,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-12.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1278,8 +1283,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-13.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1307,8 +1312,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-10.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1336,8 +1341,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-11.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1425,8 +1430,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-14.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1456,8 +1461,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-15.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1485,8 +1490,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-16.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1514,8 +1519,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-17.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1550,8 +1555,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-15.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1581,8 +1586,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-16.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1610,8 +1615,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-17.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1639,8 +1644,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-18.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1675,8 +1680,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-16.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1706,8 +1711,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-17.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1735,8 +1740,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-18.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1764,8 +1769,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-14.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1800,8 +1805,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-17.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1831,8 +1836,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-18.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1860,8 +1865,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-14.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1889,8 +1894,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-15.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1925,8 +1930,8 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-18.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
@@ -1956,8 +1961,8 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-17.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -1985,8 +1990,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-16.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -2014,8 +2019,8 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-15.jpg" alt="IMG">
-												</a>
+													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
@@ -2113,7 +2118,7 @@
 						<!--  -->
 						<div class="flex-c-s p-t-8">
 							<a href="#">
-								<img class="max-w-full" src="images/banner-02.jpg" alt="IMG">
+								<img class="max-w-full" src="{{ asset('assets/images/banner-02.jpg') }}" alt="IMG">
 							</a>
 						</div>
 						
@@ -2185,7 +2190,7 @@
 	<div class="container">
 		<div class="flex-c-c">
 			<a href="#">
-				<img class="max-w-full" src="images/banner-01.jpg" alt="IMG">
+				<img class="max-w-full" src="{{ asset('assets/images/banner-01.jpg') }}" alt="IMG">
 			</a>
 		</div>
 	</div>
@@ -2206,8 +2211,8 @@
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
-								</a>
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
@@ -2237,8 +2242,8 @@
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-02.jpg" alt="IMG">
-								</a>
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
@@ -2268,8 +2273,8 @@
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-03.jpg" alt="IMG">
-								</a>
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
@@ -2299,8 +2304,8 @@
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-04.jpg" alt="IMG">
-								</a>
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
@@ -2330,8 +2335,8 @@
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-05.jpg" alt="IMG">
-								</a>
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
@@ -2361,8 +2366,8 @@
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-06.jpg" alt="IMG">
-								</a>
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
@@ -2402,9 +2407,8 @@
 
 							<div>
 								<div class="wrap-pic-w pos-relative">
-									<img src="images/video-01.jpg" alt="IMG">
-
-									<button class="s-full ab-t-l flex-c-c fs-32 cl0 hov-cl10 trans-03" data-toggle="modal" data-target="#modal-video-01">
+									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+							<button class="s-full ab-t-l flex-c-c fs-32 cl0 hov-cl10 trans-03" data-toggle="modal" data-target="#modal-video-01">
 										<span class="fab fa-youtube"></span>
 									</button>
 								</div>

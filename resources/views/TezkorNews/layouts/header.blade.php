@@ -165,27 +165,27 @@
 					</li>
 
 					<li>
-						<a href="{{ route('site.news') }}">News</a>
+						<a href="{{ route('site.news') }}">Moliya</a>
 					</li>
 
 					<li>
-						<a href="{{ route('site.entertainment') }}">Entertainment </a>
+						<a href="{{ route('site.entertainment') }}">Ta'lim</a>
+					</li>
+
+					
+
+					<li>
+						<a href="{{ route('site.news') }}">Siyosat</a>
+					</li>
+<li>
+						<a href="{{ route('site.news') }}">Biznes</a>
+					</li>
+					<li>
+						<a href="{{ route('site.news') }}">Jahon</a>
 					</li>
 
 					<li>
-						<a href="{{ route('site.news') }}">Business</a>
-					</li>
-
-					<li>
-						<a href="{{ route('site.news') }}">Travel</a>
-					</li>
-
-					<li>
-						<a href="{{ route('site.news') }}">Life Style</a>
-					</li>
-
-					<li>
-						<a href="{{ route('site.news') }}">Video</a>
+						<a href="{{ route('site.news') }}">Jamiyat</a>
 					</li>
 
 					<li>
@@ -228,7 +228,7 @@
 					<!-- Menu desktop -->
 					<nav class="menu-desktop">
 						<a class="logo-stick" href="index.html">
-							<img src="images/icons/logo-01.png" alt="LOGO">
+							<img src="{{ asset('assets/images/icons/logo-01.png') }}" alt="LOGO">
 						</a>
 
 						<ul class="main-menu">
@@ -242,7 +242,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">News</a>
+								<a href="{{ route('site.news') }}">Moliya</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -261,7 +261,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-05.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-05.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -288,98 +288,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-10.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Finance
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-14.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Beach
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-36.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Technology
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -389,7 +298,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-50.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-50.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -416,108 +325,14 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-08.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-07.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-06.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
+												
 										<div class="tab-pane" id="news-2" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-21.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-21.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -544,98 +359,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-24.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-22.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-23.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -645,7 +369,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-25.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-25.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -672,98 +396,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-27.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-26.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-34.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -773,7 +406,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-35.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-35.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -800,98 +433,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-36.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-37.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-38.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -901,7 +443,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-39.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-39.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -928,98 +470,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-41.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-42.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-40.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -1027,7 +478,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Entertainment </a>
+								<a href="{{ route('site.news') }}">Ta'lim </a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1043,7 +494,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-25.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-25.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1070,98 +521,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-27.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-26.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-34.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -1171,7 +531,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-35.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-35.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1198,98 +558,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-36.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-37.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-38.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -1299,7 +568,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-39.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-39.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1326,106 +595,14 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-41.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-42.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-40.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
+																							</div>
 										</div>
 									</div>
 								</div>
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Business</a>
+								<a href="{{ route('site.news') }}">Siyosat</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1440,7 +617,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-10.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-10.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1467,99 +644,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-11.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
 												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-26.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-34.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
 										</div>
 
 										<div class="tab-pane" id="business-2" role="tabpanel">
@@ -1568,7 +653,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-35.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-35.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1595,98 +680,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-36.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-37.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-38.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -1694,7 +688,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Travel</a>
+								<a href="{{ route('site.news') }}">Jahon</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1709,7 +703,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-39.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-39.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1736,98 +730,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-41.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-42.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-40.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 
@@ -1837,7 +740,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-35.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-35.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -1864,98 +767,7 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-36.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-37.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-38.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -1963,7 +775,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Life Style</a>
+								<a href="{{ route('site.news') }}">Jamiyat</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -1977,7 +789,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-25.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-25.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -2004,106 +816,14 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-27.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-26.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-34.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
+																							</div>
 										</div>
 									</div>
 								</div>
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Video</a>
+								<a href="{{ route('site.news') }}">O'zbekiston</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -2117,7 +837,7 @@
 													<!-- Item post -->	
 													<div>
 														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-50.jpg" alt="IMG">
+															<img src="{{ asset('assets/images/post-50.jpg') }}" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
@@ -2144,104 +864,109 @@
 													</div>
 												</div>
 
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-08.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-07.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
-															<img src="images/post-06.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 									</div>
 								</div>
 							</li>
+<li class="mega-menu-item">
+								<a href="{{ route('site.news') }}">Sport</a>
 
+								<div class="sub-mega-menu">
+									<div class="nav flex-column nav-pills" role="tablist">
+										<a class="nav-link active" data-toggle="pill" href="#video-1" role="tab">All</a>
+									</div>
+
+									<div class="tab-content">
+										<div class="tab-pane show active" id="video-1" role="tabpanel">
+											<div class="row">
+												<div class="col-3">
+													<!-- Item post -->	
+													<div>
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
+															<img src="{{ asset('assets/images/post-50.jpg') }}" alt="IMG">
+														</a>
+
+														<div class="p-t-10">
+															<h5 class="p-b-5">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
+																	Donec metus orci, malesuada et lectus vitae
+																</a>
+															</h5>
+
+															<span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mega-menu-item">
+								<a href="{{ route('site.news') }}">O'zbekiston</a>
+
+								<div class="sub-mega-menu">
+									<div class="nav flex-column nav-pills" role="tablist">
+										<a class="nav-link active" data-toggle="pill" href="#video-1" role="tab">All</a>
+									</div>
+
+									<div class="tab-content">
+										<div class="tab-pane show active" id="video-1" role="tabpanel">
+											<div class="row">
+												<div class="col-3">
+													<!-- Item post -->	
+													<div>
+														<a href="{{route('site.blog-grid')}}" class="wrap-pic-w hov1 trans-03">
+															<img src="{{ asset('assets/images/post-50.jpg') }}" alt="IMG">
+														</a>
+
+														<div class="p-t-10">
+															<h5 class="p-b-5">
+																<a href="{{route('site.blog-grid')}}" class="f1-s-5 cl3 hov-cl10 trans-03">
+																	Donec metus orci, malesuada et lectus vitae
+																</a>
+															</h5>
+
+															<span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							
 							<li>
 								<a href="#">Features</a>
 								<ul class="sub-menu">

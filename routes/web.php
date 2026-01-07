@@ -7,7 +7,7 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReklamalarController;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,23 +37,14 @@ Route::name('site.')->group(function () {
 
     // Batafsil ko'rish sahifasi (Slug bo'yicha)
     Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');
-    Route::get('/news', function () { 
-        return view('TezkorNews.news'); 
-    })->name('news');
-    Route::post('/comment/store', [CommentsController::class, 'store'])
-    ->name('comment.store');
+    Route::get('/news', function () { return view('TezkorNews.news'); })->name('news');
+    Route::post('/comment/store', [CommentsController::class, 'store'])->name('comment.store');
 
-    Route::get('/entertainment', function () { 
-        return view('TezkorNews.entertainment'); 
-    })->name('entertainment');
+    Route::get('/entertainment', function () {  return view('TezkorNews.entertainment'); })->name('entertainment');
 
-    Route::get('/business', function () { 
-        return view('TezkorNews.news'); 
-    })->name('business');
+    Route::get('/business', function () { return view('TezkorNews.news'); })->name('business');
 
-    Route::get('/travel', function () { 
-        return view('TezkorNews.news'); 
-    })->name('travel');
+    Route::get('/travel', function () { return view('TezkorNews.news'); })->name('travel');
 
     Route::get('/lifestyle', function () { 
         return view('TezkorNews.news'); 
@@ -80,9 +71,7 @@ Route::name('site.')->group(function () {
     Route::get('/blog-detail-01', function() {      
         return view('TezkorNews.blog-detail-01');
     })->name('blog-detail-01');
-    Route::get('/blog-detail-02', function() {      
-        return view('TezkorNews.blog-detail-02');
-    })->name('blog-detail-02'); 
+    Route::get('/blog-detail-02', function() {return view('TezkorNews.blog-detail-02');})->name('blog-detail-02'); 
 });
 
 
@@ -91,7 +80,7 @@ Route::prefix("dashboard")->name('admin.')->middleware(['auth:web', 'verified'])
     Route::get('/charts', function() { return view('admin.charts'); })->name('charts');
     Route::get('/404', function() { return view('admin.404'); })->name('404');
     Route::get('/login', function() {return view('admin.login');})->name('login');
-    Route::get('/blank', function() {return view('admin.blank');})->name('blank');           Route::get('/tables', function() {return view('admin.tables');})->name('tables');
+    Route::get('/blank', function() {return view('admin.blank');})->name('blank');           
     Route::get('/register', function() { return view('admin.register');})->name('register');
     Route::get('/forgot-password', function() { return view('admin.forgot-password');})->name('forgot-password');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -103,6 +92,7 @@ Route::prefix("dashboard")->name('admin.')->middleware(['auth:web', 'verified'])
     Route::resource('articles', ArticlesController::class); 
     Route::resource('media', MediaController::class);
     Route::resource('reklama', ReklamalarController::class);
+    Route::get('/tables', [AdminController::class, 'showTables'])->name('tables');
 });
 // ADMIN LOGIN
 Route::get('/dashboard/login', function() {

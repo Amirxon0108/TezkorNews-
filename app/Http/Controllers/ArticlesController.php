@@ -127,9 +127,9 @@ class ArticlesController extends Controller
         
         if($article->thumbnail){
             Storage::disk('public')->delete($article->thumbnail);
-
+}
             $article->delete();
             return redirect()->route('admin.articles.index')->with('success', 'Maqola muvaffaqiyatli o\'chirildi!');
-        }
+        
         }
     }

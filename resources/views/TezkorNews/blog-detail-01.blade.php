@@ -52,6 +52,7 @@
 							<h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
 								{{$article->title}}
 							</h3>
+
 							
 							<div class="flex-wr-s-s p-b-40">
 								<span class="f1-s-3 cl8 m-r-15">
@@ -76,18 +77,16 @@
 									{{$article->comments->count()}} Comment
 								</a>
 							</div>
-
+							<p class="f1-s-20 cl4 p-b-25">
+							{{$article->excerpt}}		
+						</p>	
 							<div class="wrap-pic-max-w p-b-30">
 								<img src="{{ asset('storage/' . $article->thumbnail) }}" alt="IMG">
 							</div>
 
-							<p class="f1-s-11 cl6 p-b-25">
-							{{$article->excerpt}}		
-						</p>
+							
 
-							<p class="f1-s-11 cl6 p-b-25">
-								{{$article->slug}}
-													</p>
+							
 
 							<p class="f1-s-11 cl6 p-b-25">
 						{{$article->body}}	

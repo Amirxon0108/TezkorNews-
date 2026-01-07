@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $articles = Article::published()->with('category')->latest()->paginate(1);
+        $articles = Article::with(['category', 'author'])->latest()->take(5)->get();
         return view('index', compact('articles'));
     }
     public function show($slug)

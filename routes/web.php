@@ -93,6 +93,9 @@ Route::prefix("dashboard")->name('admin.')->middleware(['auth:web', 'verified'])
     Route::resource('media', MediaController::class);
     Route::resource('reklama', ReklamalarController::class);
     Route::get('/tables', [AdminController::class, 'showTables'])->name('tables');
+    Route::get('/users', [AdminController::class, 'showUsers'])->name('users.Users');
+    Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('user.edit');
+    Route::put('/users/{id}', [AdminController::class, 'updateUser'])->name('user.update');
 });
 // ADMIN LOGIN
 Route::get('/dashboard/login', function() {

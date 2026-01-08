@@ -41,11 +41,13 @@
             
             <div class="card-body p-2 text-center">
                 <small class="d-block mb-2 text-truncate">{{ $item->file_name }}</small>
+               @can('delete-data')
                 <form action="{{ route('admin.media.destroy', $item->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-sm btn-danger w-100" onclick="return confirm('O\'chirilsinmi?')">O'chirish</button>
                         </form>
+                        @endcan
                 </div>
         </div>
     </div>

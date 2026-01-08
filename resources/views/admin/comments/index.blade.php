@@ -47,10 +47,12 @@
                         <button class="btn btn-sm btn-success">Tasdiqlash</button>
                     </form>
                 @endif
+                @can('delete-data')
                 <form action="{{ route('admin.comments.destroy', $comment->id) }}" method="POST" class="d-inline">
                     @csrf @method('DELETE')
                     <button class="btn btn-sm btn-danger">O'chirish</button>
                 </form>
+                @endcan
                 <a href="{{route('admin.comments.show', $comment->id)}}" class="btn btn-sm btn-info">Ko'rish</a>
             </td>
         </tr>

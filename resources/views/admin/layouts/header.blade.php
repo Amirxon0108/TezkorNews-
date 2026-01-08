@@ -121,7 +121,11 @@
                     <i class="fas fa-fw fa-video"></i>
                     <span>Media</span></a>
             </li>
-            
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.users.Users')}}">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Users role</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

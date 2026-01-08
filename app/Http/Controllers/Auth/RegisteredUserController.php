@@ -51,6 +51,7 @@ class RegisteredUserController extends Controller
 
     \Illuminate\Support\Facades\Auth::login($user);
 
-    return redirect(route('/dashboard/admin/', absolute: false));
+    // return redirect(route('HOME', absolute: false)); <-- Eskisi
+return redirect()->route('admin.index'); // <-- Yangisi
 }
 }

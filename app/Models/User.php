@@ -46,4 +46,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function role()
+    {
+        return $this->belongsTo(roles::class, 'role_id');
+    }
+    public function is_admin()
+    {
+        return $this->role && $this->role->role === 'admin';
+    }
 }

@@ -1,4 +1,4 @@
-@extends('TezkorNews.layouts.master')
+    @extends('TezkorNews.layouts.master')
 @section('content')
 	<!-- Breadcrumb -->
 	<div class="container">

@@ -76,11 +76,13 @@
                             <td class="d-flex gap-1">
                                 <a href="{{ route('admin.reklama.edit', $reklama->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                 <a href="{{ route('admin.reklama.show', $reklama->id) }}" class="btn btn-sm btn-info text-white">Show</a>
+                               @can('delete-data')
                                 <form action="{{ route('admin.reklama.destroy', $reklama->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                                 </form>
+                                @endcan
                             </td>
                         </tr>
                         @endforeach

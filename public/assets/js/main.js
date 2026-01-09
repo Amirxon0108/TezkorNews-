@@ -91,40 +91,35 @@
 
     /*==================================================================
     [ Menu mobile ]*/
-    try {
-        $('.btn-show-menu-mobile').on('click', function(){
-            $(this).toggleClass('is-active');
-            $('.menu-mobile').slideToggle();
-        });
+   /*==================================================================
+[ Menu mobile - FIXED VERSION ]*/
+try {
+    // Avvalgi barcha click hodisalarini o'chiramiz (.off) va yangisini ulaymiz
+    $('.btn-show-menu-mobile').off('click').on('click', function(e){
+        e.preventDefault(); 
+        e.stopPropagation(); // Hodisa yuqoriga tarqalishini to'xtatadi
 
-        var arrowMainMenu = $('.arrow-main-menu-m');
+        $(this).toggleClass('is-active');
+        // .stop(true, true) animatsiya navbatini tozalaydi
+        $('.menu-mobile').stop(true, true).slideToggle(400);
+    });
 
-        for(var i=0; i<arrowMainMenu.length; i++){
-            $(arrowMainMenu[i]).on('click', function(){
-                $(this).parent().find('.sub-menu-m').slideToggle();
-                $(this).toggleClass('turn-arrow-main-menu-m');
-            })
-        }
+    // Arrow (ichki menyular) uchun
+    $('.arrow-main-menu-m').off('click').on('click', function(){
+        $(this).parent().find('.sub-menu-m').stop(true, true).slideToggle(400);
+        $(this).toggleClass('turn-arrow-main-menu-m');
+    });
 
-        $(window).on('resize',function(){
-            if($(window).width() >= 992){
-                if($('.menu-mobile').css('display') === 'block') {
-                    $('.menu-mobile').css('display','none');
-                    $('.btn-show-menu-mobile').toggleClass('is-active');
-                }
-
-                $('.sub-menu-m').each(function(){
-                    if($(this).css('display') === 'block') { 
-                        $(this).css('display','none');
-                        $(arrowMainMenu).removeClass('turn-arrow-main-menu-m');
-                    }
-                });
-                    
+    // Ekran kattalashganda menyuni avtomatik yopish
+    $(window).on('resize', function(){
+        if($(window).width() >= 992){
+            if($('.menu-mobile').css('display') === 'block') {
+                $('.menu-mobile').hide();
+                $('.btn-show-menu-mobile').removeClass('is-active');
             }
-        });
-    } catch(er) {console.log(er);}
-
-
+        }
+    });
+} catch(er) { console.log(er); }
     /*==================================================================
     [ Respon tab01 ]*/
     try {

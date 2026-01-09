@@ -6,20 +6,20 @@
 		<div class="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 size-w-0 m-tb-6 flex-wr-s-c">
 				<span class="text-uppercase cl2 p-r-8">
-					Trending Now:
+					Raxbariyat:
 				</span>
 
 				<span class="dis-inline-block cl6 slide100-txt pos-relative size-w-0" data-in="fadeInDown" data-out="fadeOutDown">
 					<span class="dis-inline-block slide100-txt-item animated visible-false">
-						Interest rate angst trips up US equity bull market
+						Bu yerda sizning reklamangiz bo'lishi mumkin edi !
 					</span>
 					
 					<span class="dis-inline-block slide100-txt-item animated visible-false">
-						Designer fashion show kicks off Variety Week
+						Bu yerda sizning reklamangiz bo'lishi mumkin edi !
 					</span>
 
 					<span class="dis-inline-block slide100-txt-item animated visible-false">
-						Microsoft quisque at ipsum vel orci eleifend ultrices
+						Bu yerda sizning reklamangiz bo'lishi mumkin edi !
 					</span>
 				</span>
 			</div>
@@ -150,30 +150,16 @@
 							<div class="tab01-head how2 how2-cl1 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
 								<h3 class="f1-m-2 cl12 tab01-title">
-									Entertainment
+									Siyosat
 								</h3>
 
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
 									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#tab1-1" role="tab">All</a>
+										<a class="nav-link active" data-toggle="tab" href="#tab1-1" role="tab">Eng so'ngi yangiliklar</a>
 									</li>
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-2" role="tab">Celebrity</a>
-									</li>
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-3" role="tab">Movies</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-4" role="tab">Music</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-5" role="tab">Games</a>
-									</li>
 
 									<li class="nav-item-more dropdown dis-none">
 										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
@@ -187,7 +173,7 @@
 								</ul>
 
 								<!--  -->
-								<a href="category-01.html" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
+								<a href="" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
 									View all
 									<i class="fs-12 m-l-5 fa fa-caret-right"></i>
 								</a>
@@ -201,52 +187,56 @@
 									<div class="row">
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
+											 @if(isset($siyosat[0]))
 											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-05.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $siyosat[0]->slug ) }}" class="wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $siyosat[0]->thumbnail) }}" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
+														<a href="{{route('site.article.show', $siyosat[0]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+															{{ $siyosat[0]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Music
+														<a href="{{route('site.article.show', $siyosat[0]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+															{{ $siyosat[0]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
 															-
 														</span>
+														
 
 														<span class="f1-s-3">
-															Feb 18
+															{{ $siyosat[0]->created_at->format('d M Y') }}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 										</div>
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
+											 @if(isset($siyosat[1]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-06.jpg') }}" alt="IMG">
+												<a href="{{route('site.article.show', $siyosat[1]->slug)}}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $siyosat[1]->thumbnail) }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{route('site.article.show', $siyosat[1]->slug)}}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $siyosat[1]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Music
+														<a href="{{route('site.article.show', $siyosat[1]->slug)}}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $siyosat[1]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -254,28 +244,29 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 17
+															{{ $siyosat[1]->created_at->format('d M Y') }}
 														</span>
 													</span>
 												</div>
 											</div>
-											
+											@endif
+											@if(isset($siyosat[2]))
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-07.jpg') }}" alt="IMG">
+												<a href="{{route('site.article.show', $siyosat[2]->slug)}}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $siyosat[2]->thumbnail ) }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{route('site.article.show', $siyosat[2]->slug)}}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $siyosat[2]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Game
+														<a href="{{route('site.article.show', $siyosat[2]->slug)}}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $siyosat[2]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -283,28 +274,29 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 16
+															{{$siyosat[2]->created_at->format('d M Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
-
+											@endif
+											@if(isset($siyosat[3]))
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">	
+												<a href="{{ route('site.article.show', $siyosat[3]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/'. $siyosat[3]->thumbnail) }}" alt="IMG">	
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $siyosat[3]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $siyosat[3]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Celebrity
+														<a href="{{ route('site.article.show', $siyosat[3]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $siyosat[3]->category->name	 }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -312,514 +304,17 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 12
+															{{ $siyosat[3]->created_at->format('M d Y') }}
 														</span>
 													</span>
 												</div>
-											</div>
+											</div>@endif
 										</div>
 									</div>
 								</div>
 
 								<!-- - -->
-								<div class="tab-pane fade" id="tab1-2" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-09.jpg') }}" alt="IMG">
-												</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Celebrity
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Game
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab1-3" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Celebrity
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Game
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab1-4" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Celebrity
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Game
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab1-5" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Celebrity
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Game
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 
@@ -828,7 +323,7 @@
 							<div class="tab01-head how2 how2-cl2 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
 								<h3 class="f1-m-2 cl13 tab01-title">
-									Business
+									Ta'lim
 								</h3>
 
 								<!-- Nav tabs -->
@@ -837,17 +332,7 @@
 										<a class="nav-link active" data-toggle="tab" href="#tab2-1" role="tab">All</a>
 									</li>
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab2-2" role="tab">Finance</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab2-3" role="tab">Money & Markets</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab2-4" role="tab">Small Business</a>
-									</li>
+									
 
 									<li class="nav-item-more dropdown dis-none">
 										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
@@ -875,21 +360,23 @@
 									<div class="row">
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
+											 @if(isset($talim[0])) 
+
 											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
+												<a href="{{ route('site.article.show', $talim[0]->slug) }}" class="wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $talim[0]->thumbnail) }}" alt="IMG">
+								</a>	
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															Bitcoin lorem ipsum dolor sit amet consectetur 
+														<a href="{{ route('site.article.show', $talim[0]->slug) }}" class="f1-m-3 cl2 hov-cl10 trans-03">
+															{{ $talim[0]->title }} 
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Finance
+														<a href="{{ route('site.article.show', $talim[0]->slug) }}" class="f1-s-4 cl8 hov-cl10 trans-03">
+															{{ $talim[0]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -897,30 +384,32 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 18
+														{{ $talim[0]->created_at->format(' M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 										</div>
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
+											 @if(isset($talim[1]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $talim[1]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $talim[1]->thumbnail ) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $talim[1]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $talim[1]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Small Business
+														<a href="{{ route('site.article.show', $talim[1]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $talim[1]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -928,28 +417,30 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 17
+															{{ $talim[1]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 											
 											<!-- Item post -->
+											@if(isset($talim[2]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $talim[2]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $talim[2]->thumbnail ) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $talim[2]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $talim[2]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Economy
+														<a href="{{ route('site.article.show', $talim[2]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $talim[2]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -957,28 +448,30 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 16
+															{{ $talim[2]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 
 											<!-- Item post -->
+											@if(isset($talim[3]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $talim[3]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $talim[3]->thumbnail ) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $talim[3]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $talim[3]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Money & Markets
+														<a href="{{ route('site.article.show', $talim[3]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $talim[3]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -986,389 +479,17 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 12
+															{{ $talim[3]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 										</div>
 									</div>
 								</div>
 
-								<!-- - -->
-								<div class="tab-pane fade" id="tab2-2" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															Bitcoin lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Finance
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Small Business
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Economy
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Money & Markets
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab2-3" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															Bitcoin lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Finance
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Small Business
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Economy
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Money & Markets
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab2-4" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															Bitcoin lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Finance
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Small Business
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Economy
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Money & Markets
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 
@@ -1377,7 +498,7 @@
 							<div class="tab01-head how2 how2-cl3 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
 								<h3 class="f1-m-2 cl14 tab01-title">
-									Travel
+									Moliya
 								</h3>
 
 								<!-- Nav tabs -->
@@ -1386,21 +507,7 @@
 										<a class="nav-link active" data-toggle="tab" href="#tab3-1" role="tab">All</a>
 									</li>
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-2" role="tab">Hotels</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-3" role="tab">Flight</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-4" role="tab">Beachs</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-5" role="tab">Culture</a>
-									</li>
+									
 
 									<li class="nav-item-more dropdown dis-none">
 										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
@@ -1428,21 +535,22 @@
 									<div class="row">
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
+											 @if(isset($moliya[0]))
 											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $moliya[0]->slug) }}" class="wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $moliya[0]->thumbnail) }}" alt="IMG">
 								</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
+														<a href="{{ route('site.article.show', $moliya[0]->slug) }}" class="f1-m-3 cl2 hov-cl10 trans-03">
+															{{ $moliya[0]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Hotels
+														<a href="{{ route('site.article.show', $moliya[0]->slug) }}" class="f1-s-4 cl8 hov-cl10 trans-03">
+															{{ $moliya[0]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -1450,30 +558,32 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 18
+															{{ $moliya[0]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 										</div>
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
+											 @if(isset($moliya[1]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $moliya[1]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $moliya[1]->thumbnail) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $moliya[1]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $moliya[1]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Beachs
+														<a href="{{ route('site.article.show', $moliya[1]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $moliya[1]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -1481,28 +591,29 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 17
+															{{ $moliya[1]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
-											
+											@endif
 											<!-- Item post -->
+											 @if(isset($moliya[2]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $moliya[2]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $moliya[2]->thumbnail) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $moliya[2]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $moliya[2]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Flight
+														<a href="{{ route('site.article.show', $moliya[2]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $moliya[2]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -1510,28 +621,30 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 16
+															{{ $moliya[2]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 
 											<!-- Item post -->
+											 @if(isset($moliya[3]))
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+												<a href="{{ route('site.article.show', $moliya[3]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $moliya[3]->thumbnail) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+														<a href="{{ route('site.article.show', $moliya[3]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $moliya[3]->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Culture
+														<a href="{{ route('site.article.show', $moliya[3]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $moliya[3]->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -1539,514 +652,16 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 12
+															{{ $moliya[3]->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
+											@endif
 										</div>
 									</div>
 								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab3-2" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Hotels
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Beachs
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Flight
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Culture
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab3-3" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Hotels
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Beachs
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Flight
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Culture
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab3-4" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Hotels
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Beachs
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Flight
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Culture
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
-								<div class="tab-pane fade" id="tab3-5" role="tabpanel">
-									<div class="row">
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="m-b-30">
-												<a href="" class="wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="p-t-20">
-													<h5 class="p-b-5">
-														<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Hotels
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 18
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Beachs
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Flight
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Culture
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -2058,67 +673,30 @@
 						<div>
 							<div class="how2 how2-cl4 flex-s-c">
 								<h3 class="f1-m-2 cl3 tab01-title">
-									Most Popular
+									Eng ko'p ko'rilgan
 								</h3>
 							</div>
 
 							<ul class="p-t-35">
+								@foreach($mostPopular as $most)
 								<li class="flex-wr-sb-s p-b-22">
 									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										1
+										eng
 									</div>
 
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit
+									<a href="{{ route('site.article.show', $most->slug) }}" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+										{{ $most->title }}
 									</a>
 								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										2
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Proin velit consectetur non neque
-									</a>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										3
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Nunc vestibulum, enim vitae condimentum volutpat lobortis ante
-									</a>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										4
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Proin velit justo consectetur non neque elementum
-									</a>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0">
-										5
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Proin velit consectetur non neque
-									</a>
-								</li>
+								@endforeach
+								
 							</ul>
 						</div>
 
 						<!--  -->
 						<div class="flex-c-s p-t-8">
 							<a href="#">
-								<img class="max-w-full" src="{{ asset('assets/images/banner-02.jpg') }}" alt="IMG">
+								<img class="max-w-full" src="{{ asset('assets/images/banner-02.png') }}" alt="IMG">
 							</a>
 						</div>
 						
@@ -2188,12 +766,11 @@
 
 	<!-- Banner -->
 	<div class="container">
-		<div class="flex-c-c">
-			<a href="#">
-				<img class="max-w-full" src="{{ asset('assets/images/banner-01.jpg') }}" alt="IMG">
-			</a>
-		</div>
-	</div>
+    <div class="flex-c-c p-t-20 p-b-20"> <a href="#">
+            <img class="img-fluid" src="{{ asset('assets/images/banner-01.jpg') }}" alt="Banner">
+        </a>
+    </div>
+</div>
 
 	<!-- Latest -->
 	<section class="bg0 p-t-60 p-b-35">
@@ -2209,21 +786,22 @@
 					<div class="row p-t-35">
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($articles[4]))
 							<div class="m-b-45">
-								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $articles[4]->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $articles[4]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $articles[4]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -2231,30 +809,32 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 18
+											{{$articles[4]->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($articles[5]))
 							<div class="m-b-45">
-								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $articles[5]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $articles[5]->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+										<a href="{{ route('site.article.show', $articles[5]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $articles[5]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+										<a href="{{ route('site.article.show', $articles[5]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $articles[5]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -2262,30 +842,32 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 16
+											{{$articles[5]->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($articles[6]))
 							<div class="m-b-45">
-								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $articles[6]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $articles[6]->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $articles[6]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+										<a href="{{ route('site.article.show', $articles[6]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $articles[6]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -2293,30 +875,32 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 15
+											{{$articles[6]->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($articles[7]))
 							<div class="m-b-45">
-								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $articles[7]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $articles[7]->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+										<a href="{{ route('site.article.show', $articles[7]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $articles[7]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+										<a href="{{ route('site.article.show', $articles[7]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $articles[7]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -2324,30 +908,32 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 13
+											{{$articles[7]->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($articles[8]))
 							<div class="m-b-45">
-								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $articles[8]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $articles[8]->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+										<a href="{{ route('site.article.show', $articles[8]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $articles[8]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+										<a href="{{ route('site.article.show', $articles[8]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $articles[8]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -2355,30 +941,32 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 10
+											{{$articles[8]->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($articles[9]))
 							<div class="m-b-45">
-								<a href="" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/post-08.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $articles[9]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $articles[9]->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+										<a href="{{ route('site.article.show', $articles[9]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $articles[9]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+										<a href="{{ route('site.article.show', $articles[9]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $articles[9]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -2386,11 +974,12 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 09
+											{{$articles[9]->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
 					</div>
 				</div>

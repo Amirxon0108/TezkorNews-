@@ -52,6 +52,6 @@ class User extends Authenticatable
     }
     public function is_admin()
     {
-        return $this->role && $this->role->role === 'admin';
+        return $this->role && $this->role->role === 'adminstrator';
     }
 }

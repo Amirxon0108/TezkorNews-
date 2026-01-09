@@ -46,64 +46,69 @@
 					<div class="col-sm-6 col-lg-4 p-b-20">
 						<div class="size-h-3 flex-s-c">
 							<h5 class="f1-m-7 cl0">
-								Popular Posts
+								Eng ko'p ko'rilgan
 							</h5>
 						</div>
 
 						<ul>
+							@if(isset($mostPopular[0]))
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/popular-post-01.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $mostPopular[0]->slug) }}" class="size-w-4 wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/'. $mostPopular[0]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
-											Donec metus orci, malesuada et lectus vitae
+										<a href="{{ route('site.article.show', $mostPopular[0]->slug) }}" class="f1-s-5 cl11 hov-cl10 trans-03">
+											{{ $mostPopular[0]->title }}
 										</a>
 									</h6>
 
 									<span class="f1-s-3 cl6">
-										Feb 17
+										{{$mostPopular[0]->created_at->format('M d')}}
 									</span>
 								</div>
 							</li>
-
+							@endif
+							@if(isset($mostPopular[1]))
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/popular-post-02.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $mostPopular[1]->slug) }}" class="size-w-4 wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/'. $mostPopular[1]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
-											Lorem ipsum dolor sit amet, consectetur
+										<a href="{{ route('site.article.show', $mostPopular[1]->slug) }}" class="f1-s-5 cl11 hov-cl10 trans-03">
+											{{ $mostPopular[1]->title }}
 										</a>
 									</h6>
 
 									<span class="f1-s-3 cl6">
-										Feb 16
+										{{$mostPopular[1]->created_at->format('M d')}}
 									</span>
 								</div>
 							</li>
+							@endif
 
+							@if(isset($mostPopular[2]))
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('assets/images/popular-post-03.jpg') }}" alt="IMG">
+								<a href="{{ route('site.article.show', $mostPopular[2]->slug) }}" class="size-w-4 wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/'. $mostPopular[2]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
-											Suspendisse dictum enim quis imperdiet auctor
+										<a href="{{ route('site.article.show', $mostPopular[2]->slug) }}" class="f1-s-5 cl11 hov-cl10 trans-03">
+											{{ $mostPopular[2]->title }}
 										</a>
 									</h6>
 
 									<span class="f1-s-3 cl6">
-										Feb 15
+										{{$mostPopular[2]->created_at->format('M d')}}
 									</span>
 								</div>
 							</li>
+							@endif
 						</ul>
 					</div>
 

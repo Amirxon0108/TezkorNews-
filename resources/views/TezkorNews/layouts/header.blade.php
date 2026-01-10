@@ -165,39 +165,39 @@
 					</li>
 
 					<li>
-						<a href="{{ route('site.news') }}">Moliya</a>
+						<a href="{{ route('site.moliya') }}">Moliya</a>
 					</li>
 
 					<li>
-						<a href="{{ route('site.entertainment') }}">Ta'lim</a>
+						<a href="{{ route('site.talim') }}">Ta'lim</a>
 					</li>
 
 					
 
 					<li>
-						<a href="{{ route('site.news') }}">Siyosat</a>
+						<a href="{{ route('site.siyosat') }}">Siyosat</a>
 					</li>
 <li>
-						<a href="{{ route('site.news') }}">Biznes</a>
+						<a href="{{ route('site.biznes') }}">Biznes</a>
 					</li>
 					<li>
-						<a href="{{ route('site.news') }}">Jahon</a>
+						<a href="{{ route('site.jahon') }}">Jahon</a>
 					</li>
 
 					<li>
-						<a href="{{ route('site.news') }}">Jamiyat</a>
+						<a href="{{ route('site.jamiyat') }}">Jamiyat</a>
 					</li>
 
 					<li>
 						<a href="#">Features</a>
 						<ul class="sub-menu-m">
-							<li><a href="{{ route('site.news') }}">Category Page v1</a></li>
-							<li><a href="{{ route('site.news') }}">Category Page v2</a></li>
-							<li><a href="{{ route('site.blog-grid') }}">Blog Grid Sidebar</a></li>
-							<li><a href="{{ route('site.blog-list-01') }}">Blog List Sidebar v1</a></li>
-							<li><a href="{{ route('site.blog-list-02') }}">Blog List Sidebar v2</a></li>
-							<li><a href="{{ route('site.blog-detail-01') }}">Blog Detail Sidebar</a></li>
-							<li><a href="{{ route('site.blog-detail-02') }}">Blog Detail No Sidebar</a></li>
+							<li><a href="">Category Page v1</a></li>
+							<li><a href="">Category Page v2</a></li>
+							<li><a href="">Blog Grid Sidebar</a></li>
+							<li><a href="">Blog List Sidebar v1</a></li>
+							<li><a href="">Blog List Sidebar v2</a></li>
+							<li><a href="">Blog Detail Sidebar</a></li>
+							<li><a href="">Blog Detail No Sidebar</a></li>
 							<li><a href="{{ route('site.about') }}">About Us</a></li>
 							<li><a href="{{ route('site.contact') }}">Contact Us</a></li>
 						</ul>
@@ -218,7 +218,7 @@
 
 				<!-- Banner -->
 				<div class="banner-header">
-					<a href="https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-magnews2/"><img src="{{ asset('assets/images/banner-01.jpg') }}" alt="IMG"></a>
+					<a href="https://themewagon.com/themes/free-bootstrap-4-html5-moliya-website-template-magmoliya2/"><img src="{{ asset('assets/images/banner-01.jpg') }}" alt="IMG"></a>
 				</div>
 			</div>	
 			
@@ -242,20 +242,20 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Moliya</a>
+								<a href="{{ route('site.moliya') }}">Moliya</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
-										<a class="nav-link active" data-toggle="pill" href="#news-0" role="tab">All</a>
-										<a class="nav-link" data-toggle="pill" href="#news-1" role="tab">Entertaiment</a>
-										<a class="nav-link" data-toggle="pill" href="#news-2" role="tab">Fashion</a>
-										<a class="nav-link" data-toggle="pill" href="#news-3" role="tab">Life Style</a>
-										<a class="nav-link" data-toggle="pill" href="#news-4" role="tab">Technology</a>
-										<a class="nav-link" data-toggle="pill" href="#news-5" role="tab">Travel</a>
+										<a class="nav-link active" data-toggle="pill" href="#moliya-0" role="tab">All</a>
+										<a class="nav-link" data-toggle="pill" href="#moliya-1" role="tab">Entertaiment</a>
+										<a class="nav-link" data-toggle="pill" href="#moliya-2" role="tab">Fashion</a>
+										<a class="nav-link" data-toggle="pill" href="#moliya-3" role="tab">Life Style</a>
+										<a class="nav-link" data-toggle="pill" href="#moliya-4" role="tab">Technology</a>
+										<a class="nav-link" data-toggle="pill" href="#moliya-5" role="tab">Travel</a>
 									</div>
 
 									<div class="tab-content">
-										<div class="tab-pane show active" id="news-0" role="tabpanel">
+										<div class="tab-pane show active" id="moliya-0" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
@@ -292,7 +292,7 @@
 											</div>
 										</div>
 
-										<div class="tab-pane" id="news-1" role="tabpanel">
+										<div class="tab-pane" id="moliya-1" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
@@ -326,7 +326,7 @@
 												</div>
 
 												
-										<div class="tab-pane" id="news-2" role="tabpanel">
+										<div class="tab-pane" id="moliya-2" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
@@ -363,7 +363,7 @@
 											</div>
 										</div>
 
-										<div class="tab-pane" id="news-3" role="tabpanel">
+										<div class="tab-pane" id="moliya-3" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
@@ -400,7 +400,7 @@
 											</div>
 										</div>
 
-										<div class="tab-pane" id="news-4" role="tabpanel">
+										<div class="tab-pane" id="moliya-4" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
@@ -437,7 +437,7 @@
 											</div>
 										</div>
 
-										<div class="tab-pane" id="news-5" role="tabpanel">
+										<div class="tab-pane" id="moliya-5" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
 													<!-- Item post -->	
@@ -478,7 +478,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Ta'lim </a>
+								<a href="{{ route('site.moliya') }}">Ta'lim </a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -602,7 +602,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Siyosat</a>
+								<a href="{{ route('site.moliya') }}">Siyosat</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -688,7 +688,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Jahon</a>
+								<a href="{{ route('site.moliya') }}">Jahon</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -775,7 +775,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Jamiyat</a>
+								<a href="{{ route('site.moliya') }}">Jamiyat</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -823,7 +823,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">O'zbekiston</a>
+								<a href="{{ route('site.moliya') }}">O'zbekiston</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -871,7 +871,7 @@
 								</div>
 							</li>
 <li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">Sport</a>
+								<a href="{{ route('site.moliya') }}">Sport</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -919,7 +919,7 @@
 								</div>
 							</li>
 							<li class="mega-menu-item">
-								<a href="{{ route('site.news') }}">O'zbekiston</a>
+								<a href="{{ route('site.moliya') }}">O'zbekiston</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -970,8 +970,8 @@
 							<li>
 								<a href="#">Features</a>
 								<ul class="sub-menu">
-									<li><a href="{{ route('site.news') }}">Category Page v1</a></li>
-									<li><a href="{{ route('site.news') }}">Category Page v2</a></li>
+									<li><a href="{{ route('site.moliya') }}">Category Page v1</a></li>
+									<li><a href="{{ route('site.moliya') }}">Category Page v2</a></li>
 									<li><a href="{{ route('site.blog-grid') }}">Blog Grid `Sidebar`</a></li>
 									<li><a href="{{ route('site.blog-list-01') }}">Blog List Sidebar v1</a></li>
 									<li><a href="{{ route('site.blog-list-02') }}">Blog List Sidebar v2</a></li>

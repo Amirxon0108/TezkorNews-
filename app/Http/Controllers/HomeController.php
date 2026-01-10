@@ -16,6 +16,21 @@ class HomeController extends Controller
       $mostPopular = Article::orderBy('views_count', 'desc')->take(5)->get();
         return view('index', compact('articles', 'siyosat','talim','moliya', 'mostPopular'));
     }
+    public function moliya()
+{
+    $moliya = Article::with(['category','author'])
+        ->where('category_id', 7)
+        ->latest()
+        ->take(5)
+        ->get();
+    $moliyaForeach = Article::with(['category','author'])
+        ->where('category_id', 7)
+        ->latest()
+        ->take(10)->skip(5) // Birinchi 5 tasini o'tkazib yuboradi
+        ->get();
+    $mostPopular = Article::orderBy('views_count', 'desc')->take(5)->get();
+    return view('TezkorNews.pages.moliya', compact('moliya', 'moliyaForeach', 'mostPopular'));
+}
     public function show($slug)
 {
     $article = Article::where('slug', $slug)->firstOrFail();

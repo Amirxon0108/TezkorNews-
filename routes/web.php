@@ -1,5 +1,6 @@
 <?php
-  use App\Http\Controllers\Auth\WebController;
+
+use App\Http\Controllers\Auth\WebController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CommentsController;
@@ -33,26 +34,24 @@ Route::middleware(['guest:web_user'])->group(function () {
 Route::post('/user-logout', [WebController::class, 'user_logout'])->name('user.logout')->middleware('auth:web_user');
 Route::name('site.')->group(function () {
     
-  Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+   Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
     // Batafsil ko'rish sahifasi (Slug bo'yicha)
-    Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');
-    Route::get('/news', function () { return view('TezkorNews.news'); })->name('news');
+    Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');  
     Route::post('/comment/store', [CommentsController::class, 'store'])->name('comment.store');
 
-    Route::get('/entertainment', function () {  return view('TezkorNews.entertainment'); })->name('entertainment');
 
-    Route::get('/business', function () { return view('TezkorNews.news'); })->name('business');
+    Route::get('/moliya', [App\Http\Controllers\HomeController::class, 'moliya'])->name('moliya');
+    Route::get('/talim', function () {  return view('TezkorNews.pages.talim'); })->name('talim');
+    Route::get('/siyosat', function () { return view('TezkorNews.pages.siyosat'); })->name('siyosat');
+    Route::get('/jahon', function () { return view('TezkorNews.pages.jahon'); })->name('jahon');
+    Route::get('/jamiyat', function () { return view('TezkorNews.pages.jamiyat'); })->name('jamiyat');
+    Route::get('/ozbekiston', function () { return view('TezkorNews.pages.ozbekiston'); })->name('ozbekiston');
+    Route::get('/sport', function () { return view('TezkorNews.pages.sport'); })->name('sport');
+    Route::get('/turizm', function () { return view('TezkorNews.pages.turizm'); })->name('turizm');
+    Route::get('/biznes', function () { return view('TezkorNews.pages.biznes'); })->name('biznes');
+  
 
-    Route::get('/travel', function () { return view('TezkorNews.news'); })->name('travel');
-
-    Route::get('/lifestyle', function () { 
-        return view('TezkorNews.news'); 
-    })->name('lifestyle');
-
-    Route::get('/video', function () { 
-        return view('TezkorNews.news'); 
-    })->name('video');  
     Route::get('/about', function () { 
         return view('TezkorNews.about'); 
     })->name('about');

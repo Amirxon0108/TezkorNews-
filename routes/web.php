@@ -42,14 +42,14 @@ Route::name('site.')->group(function () {
 
 
     Route::get('/moliya', [App\Http\Controllers\HomeController::class, 'moliya'])->name('moliya');
-    Route::get('/talim', function () {  return view('TezkorNews.pages.talim'); })->name('talim');
-    Route::get('/siyosat', function () { return view('TezkorNews.pages.siyosat'); })->name('siyosat');
-    Route::get('/jahon', function () { return view('TezkorNews.pages.jahon'); })->name('jahon');
-    Route::get('/jamiyat', function () { return view('TezkorNews.pages.jamiyat'); })->name('jamiyat');
-    Route::get('/ozbekiston', function () { return view('TezkorNews.pages.ozbekiston'); })->name('ozbekiston');
-    Route::get('/sport', function () { return view('TezkorNews.pages.sport'); })->name('sport');
-    Route::get('/turizm', function () { return view('TezkorNews.pages.turizm'); })->name('turizm');
-    Route::get('/biznes', function () { return view('TezkorNews.pages.biznes'); })->name('biznes');
+    Route::get('/talim', [App\Http\Controllers\HomeController::class, 'talim'])->name('talim');
+    Route::get('/siyosat', [App\Http\Controllers\HomeController::class, 'siyosat'])->name('siyosat');
+    Route::get('/jahon', [App\Http\Controllers\HomeController::class, 'jahon'])->name('jahon');
+    Route::get('/jamiyat',[App\Http\Controllers\HomeController::class, 'jamiyat'])->name('jamiyat');
+    Route::get('/ozbekiston', [App\Http\Controllers\HomeController::class, 'ozbekiston'])->name('ozbekiston');
+    Route::get('/sport', [App\Http\Controllers\HomeController::class, 'sport'])->name('sport');
+    Route::get('/turizm',[App\Http\Controllers\HomeController::class, 'turizm'])->name('turizm');
+    Route::get('/biznes', [App\Http\Controllers\HomeController::class, 'biznes'])->name('biznes');
   
 
     Route::get('/about', function () { 

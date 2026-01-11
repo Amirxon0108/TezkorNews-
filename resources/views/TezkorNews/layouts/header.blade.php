@@ -478,7 +478,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">Ta'lim </a>
+								<a href="{{ route('site.talim') }}">Ta'lim </a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -602,7 +602,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">Siyosat</a>
+								<a href="{{ route('site.siyosat') }}">Siyosat</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -688,7 +688,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">Jahon</a>
+								<a href="{{ route('site.jahon') }}">Jahon</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -775,7 +775,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">Jamiyat</a>
+								<a href="{{ route('site.jamiyat') }}">Jamiyat</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -823,7 +823,7 @@
 							</li>
 
 							<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">O'zbekiston</a>
+								<a href="{{ route('site.ozbekiston') }}">O'zbekiston</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -870,8 +870,8 @@
 									</div>
 								</div>
 							</li>
-<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">Sport</a>
+						<li class="mega-menu-item">
+								<a href="{{ route('site.sport') }}">Sport</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
@@ -919,7 +919,7 @@
 								</div>
 							</li>
 							<li class="mega-menu-item">
-								<a href="{{ route('site.moliya') }}">O'zbekiston</a>
+								<a href="{{ route('site.biznes') }}">Biznes</a>
 
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">

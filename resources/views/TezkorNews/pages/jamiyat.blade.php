@@ -13,7 +13,7 @@
 				</a>
 
 				<span class="breadcrumb-item f1-s-3 cl9">
-					Moliya
+					jamiyat
 				</span>
 			</div>
 
@@ -29,7 +29,7 @@
 	<!-- Page heading -->
 	<div class="container p-t-4 p-b-40">
 		<h2 class="f1-l-1 cl2">
-			Moliya
+			jamiyat
 		</h2>
 	</div>
 		
@@ -38,24 +38,24 @@
 		<div class="container">
 			<div class="row m-rl--1">
 				<div class="col-md-6 p-rl-1 p-b-2">
-					@if(isset($moliya[0]))
-					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $moliya[0]->thumbnail) }});">
-						<a href="{{ route('site.blog-detail-01', $moliya[0]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+					@if(isset($jamiyat[0]))
+					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $jamiyat[0]->thumbnail) }});">
+						<a href="{{ route('site.blog-detail-01', $jamiyat[0]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-							<a href="{{ route('site.blog-detail-01', $moliya[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-								{{ $moliya[0]->category->name }}
+							<a href="{{ route('site.blog-detail-01', $jamiyat[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+								{{ $jamiyat[0]->category->name }}
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
-								<a href="{{ route('site.blog-detail-01', $moliya[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
-									{{ $moliya[0]->title }}
+								<a href="{{ route('site.blog-detail-01', $jamiyat[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+									{{ $jamiyat[0]->title }}
 								</a>
 							</h3>
 
 							<span class="how1-child2">
 								<span class="f1-s-4 cl11">
-									{{ $moliya[0]->author->name }}
+									{{ $jamiyat[0]->author->name }}
 								</span>
 
 								<span class="f1-s-3 cl11 m-rl-3">
@@ -63,28 +63,28 @@
 								</span>
 
 								<span class="f1-s-3 cl11">
-									{{ $moliya[0]->created_at->format('M d, Y') }}
+									{{ $jamiyat[0]->created_at->format('M d, Y') }}
 								</span>
 							</span>
 						</div>
 					</div>
 				</div>
 				@endif
-				@if(isset($moliya[1]))
+				@if(isset($jamiyat[1]))
 				<div class="col-md-6 p-rl-1">
 					<div class="row m-rl--1">
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $moliya[1]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $moliya[1]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $jamiyat[1]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $jamiyat[1]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $moliya[1]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $moliya[1]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $jamiyat[1]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $jamiyat[1]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $moliya[1]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $moliya[1]->title }}
+										<a href="{{ route('site.blog-detail-01', $jamiyat[1]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $jamiyat[1]->title }}
 										</a>
 									</h3>
 										
@@ -92,57 +92,57 @@
 							</div>
 						</div>
 						@endif
-						@if(isset($moliya[2]))
+						@if(isset($jamiyat[2]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $moliya[2]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $moliya[2]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $jamiyat[2]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $jamiyat[2]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $moliya[2]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $moliya[2]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $jamiyat[2]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $jamiyat[2]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $moliya[2]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $moliya[2]->title }}
+										<a href="{{ route('site.blog-detail-01', $jamiyat[2]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $jamiyat[2]->title }}
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						@endif
-						@if(isset($moliya[3]))
+						@if(isset($jamiyat[3]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $moliya[3]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $moliya[3]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $jamiyat[3]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $jamiyat[3]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $moliya[3]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $moliya[3]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $jamiyat[3]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $jamiyat[3]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $moliya[3]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $moliya[3]->title }}
+										<a href="{{ route('site.blog-detail-01', $jamiyat[3]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $jamiyat[3]->title }}
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						@endif
-						@if(isset($moliya[4]))
+						@if(isset($jamiyat[4]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $moliya[4]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $moliya[4]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $jamiyat[4]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $jamiyat[4]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $moliya[4]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $moliya[4]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $jamiyat[4]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $jamiyat[4]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $moliya[4]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $moliya[4]->title }}
+										<a href="{{ route('site.blog-detail-01', $jamiyat[4]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $jamiyat[4]->title }}
 										</a>
 									</h3>
 								</div>
@@ -161,25 +161,195 @@
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
 					<div class="row">
-
-						@foreach($moliyaForeach as $moliya)
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($jamiyat[5]))
 							<div class="m-b-45">
-								<a href="{{ route('site.blog-detail-01', $moliya->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $moliya->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $jamiyat[5]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[5]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $moliya->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $moliya->title }}
+										<a href="{{ route('site.blog-detail-01', $jamiyat[5]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[5]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="{{ route('site.blog-detail-01', $moliya->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $moliya->author->name }}
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[5]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										</span>
+
+										<span class="f1-s-3">
+											{{ $jamiyat[5]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[6]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[6]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[6]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[6]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[6]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[6]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										</span>
+
+										<span class="f1-s-3">
+											{{ $jamiyat[6]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[7]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[7]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[7]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[7]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[7]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[7]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										</span>
+
+										<span class="f1-s-3">
+											{{ $jamiyat[7]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[8]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[8]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[8]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[8]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="{{ route('site.author', $jamiyat[8]->author->slug) }}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[8]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $jamiyat[8]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[9]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[9]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[9]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[9]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[9]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[9]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $jamiyat[9]->created_at->format('M d') }}
+										</span>
+										
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[10]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[10]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[10]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[10]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[10]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[10]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -187,13 +357,151 @@
 										</span>
 
 										<span class="f1-s-3">
-											{{ $moliya->created_at->format('M d, Y') }}
+											{{ $jamiyat[10]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
-						@endforeach
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[11]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[11]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[11]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[11]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[11]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[11]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $jamiyat[11]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[12]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[12]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[12]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[12]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[12]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[12]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $jamiyat[12]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[13]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[13]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[13]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[13]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[13]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[13]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+									
+
+										<span class="f1-s-3">
+											{{ $jamiyat[13]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($jamiyat[14]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $jamiyat[14]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $jamiyat[14]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $jamiyat[14]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $jamiyat[14]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $jamiyat[14]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+										
+
+										<span class="f1-s-3">
+											{{ $jamiyat[14]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+						
 					</div>
 
 					<!-- Pagination -->

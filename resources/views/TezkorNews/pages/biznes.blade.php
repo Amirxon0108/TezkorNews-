@@ -38,24 +38,24 @@
 		<div class="container">
 			<div class="row m-rl--1">
 				<div class="col-md-6 p-rl-1 p-b-2">
-					@if(isset($talim[0]))
-					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $talim[0]->thumbnail) }});">
-						<a href="{{ route('site.blog-detail-01', $talim[0]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+					@if(isset($biznes[0]))
+					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $biznes[0]->thumbnail) }});">
+						<a href="{{ route('site.blog-detail-01', $biznes[0]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-							<a href="{{ route('site.blog-detail-01', $talim[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-								{{ $talim[0]->category->name }}
+							<a href="{{ route('site.blog-detail-01', $biznes[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+								{{ $biznes[0]->category->name }}
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
-								<a href="{{ route('site.blog-detail-01', $talim[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
-									{{ $talim[0]->title }}
+								<a href="{{ route('site.blog-detail-01', $biznes[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+									{{ $biznes[0]->title }}
 								</a>
 							</h3>
 
 							<span class="how1-child2">
 								<span class="f1-s-4 cl11">
-									{{ $talim[0]->author->name }}
+									{{ $biznes[0]->author->name }}
 								</span>
 
 								<span class="f1-s-3 cl11 m-rl-3">
@@ -63,28 +63,28 @@
 								</span>
 
 								<span class="f1-s-3 cl11">
-									{{ $talim[0]->created_at->format('M d, Y') }}
+									{{ $biznes[0]->created_at->format('M d, Y') }}
 								</span>
 							</span>
 						</div>
 					</div>
 				</div>
 				@endif
-				@if(isset($talim[1]))
+				@if(isset($biznes[1]))
 				<div class="col-md-6 p-rl-1">
 					<div class="row m-rl--1">
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $talim[1]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $talim[1]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $biznes[1]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $biznes[1]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $talim[1]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $talim[1]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $biznes[1]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $biznes[1]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $talim[1]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $talim[1]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[1]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $biznes[1]->title }}
 										</a>
 									</h3>
 										
@@ -92,57 +92,57 @@
 							</div>
 						</div>
 						@endif
-						@if(isset($talim[2]))
+						@if(isset($biznes[2]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $talim[2]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $talim[2]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $biznes[2]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $biznes[2]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $talim[2]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $talim[2]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $biznes[2]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $biznes[2]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $talim[2]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $talim[2]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[2]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $biznes[2]->title }}
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						@endif
-						@if(isset($talim[3]))
+						@if(isset($biznes[3]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $talim[3]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $talim[3]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $biznes[3]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $biznes[3]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $talim[3]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $talim[3]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $biznes[3]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $biznes[3]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $talim[3]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $talim[3]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[3]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $biznes[3]->title }}
 										</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						@endif
-						@if(isset($talim[4]))
+						@if(isset($biznes[4]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $talim[4]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $talim[4]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $biznes[4]->thumbnail) }});">
+								<a href="{{ route('site.blog-detail-01', $biznes[4]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $talim[4]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										{{ $talim[4]->category->name }}
+									<a href="{{ route('site.blog-detail-01', $biznes[4]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+										{{ $biznes[4]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $talim[4]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											{{ $talim[4]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[4]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+											{{ $biznes[4]->title }}
 										</a>
 									</h3>
 								</div>
@@ -163,22 +163,22 @@
 					<div class="row">
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[5]))
+							 @if(isset($biznes[5]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[5]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[5]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[5]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[5]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[5]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[5]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[5]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[5]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[5]->author->name }}
+											by {{ $biznes[5]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -187,7 +187,7 @@
 										</span>
 
 										<span class="f1-s-3">
-											{{ $talim[5]->created_at->format('M d') }}
+											{{ $biznes[5]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -197,22 +197,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[6]))
+							 @if(isset($biznes[6]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[6]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[6]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[6]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[6]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[6]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[6]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[6]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[6]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[6]->author->name }}
+											by {{ $biznes[6]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -221,7 +221,7 @@
 										</span>
 
 										<span class="f1-s-3">
-											{{ $talim[6]->created_at->format('M d') }}
+											{{ $biznes[6]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -231,22 +231,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[7]))
+							 @if(isset($biznes[7]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[7]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[7]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[7]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[7]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[7]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[7]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[7]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[7]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[7]->author->name }}
+											by {{ $biznes[7]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -255,7 +255,7 @@
 										</span>
 
 										<span class="f1-s-3">
-											{{ $talim[7]->created_at->format('M d') }}
+											{{ $biznes[7]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -265,22 +265,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[8]))
+							 @if(isset($biznes[8]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[8]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[8]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[8]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[8]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[8]->title }}
+											{{ $biznes[8]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="{{ route('site.author', $talim[8]->author->slug) }}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[8]->author->name }}
+										<a href="{{ route('site.author', $biznes[8]->author->slug) }}" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $biznes[8]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -289,7 +289,7 @@
 										
 
 										<span class="f1-s-3">
-											{{ $talim[8]->created_at->format('M d') }}
+											{{ $biznes[8]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -299,22 +299,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[9]))
+							 @if(isset($biznes[9]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[9]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[9]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[9]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[9]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[9]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[9]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[9]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[9]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[9]->author->name }}
+											by {{ $biznes[9]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -323,7 +323,7 @@
 										
 
 										<span class="f1-s-3">
-											{{ $talim[9]->created_at->format('M d') }}
+											{{ $biznes[9]->created_at->format('M d') }}
 										</span>
 										
 									</span>
@@ -334,22 +334,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[10]))
+							 @if(isset($biznes[10]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[10]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[10]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[10]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[10]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[10]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[10]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[10]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[10]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[10]->author->name }}
+											by {{ $biznes[10]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -357,7 +357,7 @@
 										</span>
 
 										<span class="f1-s-3">
-											{{ $talim[10]->created_at->format('M d') }}
+											{{ $biznes[10]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -367,56 +367,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[11]))
+							 @if(isset($biznes[11]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[11]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[11]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[11]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[11]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[11]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[11]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[11]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[11]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[11]->author->name }}
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-										
-
-										<span class="f1-s-3">
-											{{ $talim[11]->created_at->format('M d') }}
-										</span>
-									</span>
-								</div>
-							</div>
-							@endif
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($talim[12]))
-							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[12]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[12]->thumbnail) }}" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[12]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[12]->title }}
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[12]->author->name }}
+											by {{ $biznes[11]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -425,7 +391,7 @@
 										
 
 										<span class="f1-s-3">
-											{{ $talim[12]->created_at->format('M d') }}
+											{{ $biznes[11]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -435,22 +401,56 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[13]))
+							 @if(isset($biznes[12]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[13]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[13]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[12]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[12]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[13]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[13]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[12]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[12]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[13]->author->name }}
+											by {{ $biznes[12]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $biznes[12]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($biznes[13]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $biznes[13]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[13]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $biznes[13]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[13]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $biznes[13]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -459,7 +459,7 @@
 									
 
 										<span class="f1-s-3">
-											{{ $talim[13]->created_at->format('M d') }}
+											{{ $biznes[13]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -469,22 +469,22 @@
 
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
-							 @if(isset($talim[14]))
+							 @if(isset($biznes[14]))
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $talim[14]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $talim[14]->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $biznes[14]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $biznes[14]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $talim[14]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $talim[14]->title }}
+										<a href="{{ route('site.blog-detail-01', $biznes[14]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $biznes[14]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by {{ $talim[14]->author->name }}
+											by {{ $biznes[14]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -494,7 +494,7 @@
 										
 
 										<span class="f1-s-3">
-											{{ $talim[14]->created_at->format('M d') }}
+											{{ $biznes[14]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
@@ -504,10 +504,9 @@
 						
 					</div>
 
-
 					<!-- Pagination -->
 					<div class="flex-wr-s-c m-rl--7 p-t-15">
-						{{ $talim->links() }}
+						
 					</div>
 				</div>
 
@@ -546,7 +545,7 @@
 										eng
 									</div>
 
-									<a href="{{ route('site.blog-detail-01', $post->slug)}}" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										{{ $post->title }}
 									</a>
 								</li>

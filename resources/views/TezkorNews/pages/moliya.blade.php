@@ -160,42 +160,352 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
-					<div class="row">
-
-						@foreach($moliyaForeach as $moliya)
+						<div class="row">
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
+							 @if(isset($moliya[5]))
 							<div class="m-b-45">
-								<a href="{{ route('site.blog-detail-01', $moliya->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $moliya->thumbnail) }}" alt="IMG">
+								<a href="{{route('site.blog-detail-01', $moliya[5]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[5]->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $moliya->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $moliya->title }}
+										<a href="{{ route('site.blog-detail-01', $moliya[5]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[5]->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="{{ route('site.blog-detail-01', $moliya->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $moliya->author->name }}
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[5]->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
 											-
 										</span>
+										</span>
 
 										<span class="f1-s-3">
-											{{ $moliya->created_at->format('M d, Y') }}
+											{{ $moliya[5]->created_at->format('M d') }}
 										</span>
 									</span>
 								</div>
 							</div>
+							@endif
 						</div>
-						@endforeach
-					</div>
 
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[6]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[6]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[6]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[6]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[6]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[6]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										</span>
+
+										<span class="f1-s-3">
+											{{ $moliya[6]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[7]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[7]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[7]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[7]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[7]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[7]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										</span>
+
+										<span class="f1-s-3">
+											{{ $moliya[7]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[8]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[8]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[8]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[8]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[8]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[8]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $moliya[8]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[9]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[9]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[9]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[9]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[9]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[9]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $moliya[9]->created_at->format('M d') }}
+										</span>
+										
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[10]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[10]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[10]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[10]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[10]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[10]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+									
+										</span>
+
+										<span class="f1-s-3">
+											{{ $moliya[10]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[11]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[11]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[11]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[11]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[11]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[11]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $moliya[11]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[12]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[12]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[12]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[12]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[12]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[12]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+
+										<span class="f1-s-3">
+											{{ $moliya[12]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[13]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[13]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[13]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[13]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[13]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[13]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										
+										</span>
+									
+
+										<span class="f1-s-3">
+											{{ $moliya[13]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+							<!-- Item latest -->	
+							 @if(isset($moliya[14]))
+							<div class="m-b-45">
+								<a href="{{route('site.blog-detail-01', $moliya[14]->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $moliya[14]->thumbnail) }}" alt="IMG">
+								</a>
+
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="{{ route('site.blog-detail-01', $moliya[14]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $moliya[14]->title }}
+										</a>
+									</h5>
+
+									<span class="cl8">
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											by {{ $moliya[14]->author->name }}
+										</a>
+
+										<span class="f1-s-3 m-rl-3">
+											-
+										</span>
+										
+										
+
+										<span class="f1-s-3">
+											{{ $moliya[14]->created_at->format('M d') }}
+										</span>
+									</span>
+								</div>
+							</div>
+							@endif
+						</div>
+						
+					</div>
 					<!-- Pagination -->
 					<div class="flex-wr-s-c m-rl--7 p-t-15">
 						
@@ -237,7 +547,7 @@
 										eng
 									</div>
 
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="{{ route('site.blog-detail-01', $post->slug)}}" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										{{ $post->title }}
 									</a>
 								</li>

@@ -219,24 +219,26 @@
 											@endif
 										</div>
 
+
+										
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
-											 @if(isset($siyosat[1]))
+											 @foreach($siyosat->slice(1) as $item)
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{route('site.article.show', $siyosat[1]->slug)}}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $siyosat[1]->thumbnail) }}" alt="IMG">
+												<a href="{{route('site.article.show', $item->slug)}}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $item->thumbnail) }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="{{route('site.article.show', $siyosat[1]->slug)}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $siyosat[1]->title }}
+														<a href="{{route('site.article.show', $item->slug)}}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $item->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="{{route('site.article.show', $siyosat[1]->slug)}}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $siyosat[1]->category->name }}
+														<a href="{{route('site.article.show', $item->slug)}}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $item->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -244,71 +246,12 @@
 														</span>
 
 														<span class="f1-s-3">
-															{{ $siyosat[1]->created_at->format('d M Y') }}
+															{{ $item->created_at->format('d M Y') }}
 														</span>
 													</span>
 												</div>
 											</div>
-											@endif
-											@if(isset($siyosat[2]))
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{route('site.article.show', $siyosat[2]->slug)}}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $siyosat[2]->thumbnail ) }}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="{{route('site.article.show', $siyosat[2]->slug)}}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $siyosat[2]->title }}
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="{{route('site.article.show', $siyosat[2]->slug)}}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $siyosat[2]->category->name }}
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															{{$siyosat[2]->created_at->format('d M Y')}}
-														</span>
-													</span>
-												</div>
-											</div>
-											@endif
-											@if(isset($siyosat[3]))
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $siyosat[3]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/'. $siyosat[3]->thumbnail) }}" alt="IMG">	
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $siyosat[3]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $siyosat[3]->title }}
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="{{ route('site.article.show', $siyosat[3]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $siyosat[3]->category->name	 }}
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															{{ $siyosat[3]->created_at->format('M d Y') }}
-														</span>
-													</span>
-												</div>
-											</div>@endif
+											@endforeach										
 										</div>
 									</div>
 								</div>
@@ -394,22 +337,22 @@
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
-											 @if(isset($talim[1]))
+											@foreach( $talim->slice(1) as $item )
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $talim[1]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $talim[1]->thumbnail ) }}" alt="IMG">
+												<a href="{{ route('site.article.show', $item->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $item->thumbnail ) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $talim[1]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $talim[1]->title }}
+														<a href="{{ route('site.article.show', $item->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $item->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="{{ route('site.article.show', $talim[1]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $talim[1]->category->name }}
+														<a href="{{ route('site.article.show', $item->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $item->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -417,74 +360,12 @@
 														</span>
 
 														<span class="f1-s-3">
-															{{ $talim[1]->created_at->format('M d Y')}}
+															{{ $item->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
-											@endif
-											
-											<!-- Item post -->
-											@if(isset($talim[2]))
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $talim[2]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $talim[2]->thumbnail ) }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $talim[2]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $talim[2]->title }}
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="{{ route('site.article.show', $talim[2]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $talim[2]->category->name }}
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															{{ $talim[2]->created_at->format('M d Y')}}
-														</span>
-													</span>
-												</div>
-											</div>
-											@endif
-
-											<!-- Item post -->
-											@if(isset($talim[3]))
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $talim[3]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $talim[3]->thumbnail ) }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $talim[3]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $talim[3]->title }}
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="{{ route('site.article.show', $talim[3]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $talim[3]->category->name }}
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															{{ $talim[3]->created_at->format('M d Y')}}
-														</span>
-													</span>
-												</div>
-											</div>
-											@endif
+											@endforeach
 										</div>
 									</div>
 								</div>
@@ -568,22 +449,22 @@
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
-											 @if(isset($moliya[1]))
+											 @foreach ( $moliya->slice(1) as $item )
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $moliya[1]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $moliya[1]->thumbnail) }}" alt="IMG">
+												<a href="{{ route('site.article.show', $item->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
+													<img src="{{ asset('storage/' . $item->thumbnail) }}" alt="IMG">
 								</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $moliya[1]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $moliya[1]->title }}
+														<a href="{{ route('site.article.show', $item->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
+															{{ $item->title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
-														<a href="{{ route('site.article.show', $moliya[1]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $moliya[1]->category->name }}
+														<a href="{{ route('site.article.show', $item->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
+															{{ $item->category->name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -591,73 +472,13 @@
 														</span>
 
 														<span class="f1-s-3">
-															{{ $moliya[1]->created_at->format('M d Y')}}
+															{{ $item->created_at->format('M d Y')}}
 														</span>
 													</span>
 												</div>
 											</div>
-											@endif
-											<!-- Item post -->
-											 @if(isset($moliya[2]))
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $moliya[2]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $moliya[2]->thumbnail) }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $moliya[2]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $moliya[2]->title }}
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="{{ route('site.article.show', $moliya[2]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $moliya[2]->category->name }}
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															{{ $moliya[2]->created_at->format('M d Y')}}
-														</span>
-													</span>
-												</div>
-											</div>
-											@endif
-
-											<!-- Item post -->
-											 @if(isset($moliya[3]))
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="{{ route('site.article.show', $moliya[3]->slug) }}" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{{ asset('storage/' . $moliya[3]->thumbnail) }}" alt="IMG">
-								</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="{{ route('site.article.show', $moliya[3]->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
-															{{ $moliya[3]->title }}
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="{{ route('site.article.show', $moliya[3]->slug) }}" class="f1-s-6 cl8 hov-cl10 trans-03">
-															{{ $moliya[3]->category->name }}
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															{{ $moliya[3]->created_at->format('M d Y')}}
-														</span>
-													</span>
-												</div>
-											</div>
-											@endif
+											@endforeach
+											
 										</div>
 									</div>
 								</div>
@@ -784,24 +605,24 @@
 					</div>
 
 					<div class="row p-t-35">
+						@foreach($articles->slice(4) as $item)
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($articles[4]))
+							
 							<div class="m-b-45">
-								<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $articles[4]->thumbnail) }}" alt="IMG">
+								<a href="{{ route('site.article.show', $item->slug)}}" class="wrap-pic-w hov1 trans-03">
+									<img src="{{ asset('storage/' . $item->thumbnail) }}" alt="IMG">
 						</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $articles[4]->title }}
+										<a href="{{ route('site.article.show', $item->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+											{{ $item->title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
-										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $articles[4]->author->name }}
+										<a href="https://textopia.42web.io/sory/author-profile.php" class="f1-s-4 cl8 hov-cl10 trans-03">
+											{{ $item->author->name }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -809,178 +630,13 @@
 										</span>
 
 										<span class="f1-s-3">
-											{{$articles[4]->created_at->format('M d')}}
+											{{$item->created_at->format('M d')}}
 										</span>
 									</span>
 								</div>
 							</div>
-							@endif
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($articles[5]))
-							<div class="m-b-45">
-								<a href="{{ route('site.article.show', $articles[5]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $articles[5]->thumbnail) }}" alt="IMG">
-						</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="{{ route('site.article.show', $articles[5]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $articles[5]->title }}
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="{{ route('site.article.show', $articles[5]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $articles[5]->author->name }}
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											{{$articles[5]->created_at->format('M d')}}
-										</span>
-									</span>
-								</div>
-							</div>
-							@endif
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($articles[6]))
-							<div class="m-b-45">
-								<a href="{{ route('site.article.show', $articles[6]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $articles[6]->thumbnail) }}" alt="IMG">
-						</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $articles[6]->title }}
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="{{ route('site.article.show', $articles[6]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $articles[6]->author->name }}
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											{{$articles[6]->created_at->format('M d')}}
-										</span>
-									</span>
-								</div>
-							</div>
-							@endif
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($articles[7]))
-							<div class="m-b-45">
-								<a href="{{ route('site.article.show', $articles[7]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $articles[7]->thumbnail) }}" alt="IMG">
-						</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="{{ route('site.article.show', $articles[7]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $articles[7]->title }}
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="{{ route('site.article.show', $articles[7]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $articles[7]->author->name }}
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											{{$articles[7]->created_at->format('M d')}}
-										</span>
-									</span>
-								</div>
-							</div>
-							@endif
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($articles[8]))
-							<div class="m-b-45">
-								<a href="{{ route('site.article.show', $articles[8]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $articles[8]->thumbnail) }}" alt="IMG">
-						</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="{{ route('site.article.show', $articles[8]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $articles[8]->title }}
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="{{ route('site.article.show', $articles[8]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $articles[8]->author->name }}
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											{{$articles[8]->created_at->format('M d')}}
-										</span>
-									</span>
-								</div>
-							</div>
-							@endif
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							 @if(isset($articles[9]))
-							<div class="m-b-45">
-								<a href="{{ route('site.article.show', $articles[9]->slug)}}" class="wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/' . $articles[9]->thumbnail) }}" alt="IMG">
-						</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="{{ route('site.article.show', $articles[9]->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
-											{{ $articles[9]->title }}
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="{{ route('site.article.show', $articles[9]->slug)}}" class="f1-s-4 cl8 hov-cl10 trans-03">
-											{{ $articles[9]->author->name }}
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											{{$articles[9]->created_at->format('M d')}}
-										</span>
-									</span>
-								</div>
-							</div>
-							@endif
-						</div>
+							
+						</div>@endforeach
 					</div>
 				</div>
 

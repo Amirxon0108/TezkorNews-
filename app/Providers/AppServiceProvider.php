@@ -21,6 +21,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+      View::composer('TezkorNews.layouts.header', function ($view) {
+    // Har bir kategoriya uchun unga tegishli (category_id bo'yicha) maqolalarni yuklash
+    $categories = Category::with(['articles' => function($query) {
+        $query->latest()->limit(4); 
+    }])->get();
+
+    $view->with('header_categories', $categories);
+});
         View::share('categories', Category::all());
         View::share('popularArticles', Article::orderBy('views_count', 'desc')->take(3)->get());
     }

@@ -40,17 +40,8 @@ Route::name('site.')->group(function () {
     Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');  
     Route::post('/comment/store', [CommentsController::class, 'store'])->name('comment.store');
 
-
-    Route::get('/moliya', [App\Http\Controllers\HomeController::class, 'moliya'])->name('moliya');
-    Route::get('/talim', [App\Http\Controllers\HomeController::class, 'talim'])->name('talim');
-    Route::get('/siyosat', [App\Http\Controllers\HomeController::class, 'siyosat'])->name('siyosat');
-    Route::get('/jahon', [App\Http\Controllers\HomeController::class, 'jahon'])->name('jahon');
-    Route::get('/jamiyat',[App\Http\Controllers\HomeController::class, 'jamiyat'])->name('jamiyat');
-    Route::get('/ozbekiston', [App\Http\Controllers\HomeController::class, 'ozbekiston'])->name('ozbekiston');
-    Route::get('/sport', [App\Http\Controllers\HomeController::class, 'sport'])->name('sport');
-    Route::get('/turizm',[App\Http\Controllers\HomeController::class, 'turizm'])->name('turizm');
-    Route::get('/biznes', [App\Http\Controllers\HomeController::class, 'biznes'])->name('biznes');
-  
+    Route::get('/category/{slug}', [HomeController::class, 'categoryPage'])->name('category.show');
+    
 
     Route::get('/about', function () { 
         return view('TezkorNews.about'); 

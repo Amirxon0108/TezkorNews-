@@ -46,7 +46,7 @@
 						<!-- Blog Detail -->
 						<div class="p-b-70">
 							<a href="" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
-								{{$article->category->category_slug}}
+								{{$article->category->name}}
 							</a>
 
 							<h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
@@ -89,7 +89,7 @@
 							
 
 							<p class="f1-s-11 cl6 p-b-25">
-						{{$article->body}}	
+						{{ $article->body }}	
 						</p>
 
 							<!-- Tag -->
@@ -263,7 +263,7 @@
 								<li class="p-rl-4 p-b-19">
 									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
 										<span>
-											{{$cat->created_at}}
+											{{$cat->created_at->format('M d, Y')}}
 										</span>
 
 										<span>
@@ -289,7 +289,7 @@
 								@foreach($popularArticles as $pop)
 <li class="flex-wr-sb-s p-b-30">
     <a href="" class="size-w-10 wrap-pic-w hov1 trans-03">
-        {{-- Rasmni asset orqali chaqiramiz --}}
+        
         <img src="{{ asset('storage/' . $pop->thumbnail) }}" alt="{{ $pop->title }}">
     </a>
 

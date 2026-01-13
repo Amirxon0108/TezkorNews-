@@ -40,15 +40,15 @@
 				<div class="col-md-6 p-rl-1 p-b-2">
 					@if(isset($articles[0]))
 					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[0]->thumbnail) }});">
-						<a href="{{ route('site.blog-detail-01', $articles[0]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+						<a href="{{ route('site.article.show', $articles[0]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-							<a href="{{ route('site.blog-detail-01', $articles[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+							<a href="{{ route('site.article.show', $articles[0]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 								{{ $articles[0]->category->name }}
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
-								<a href="{{ route('site.blog-detail-01', $articles[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+								<a href="{{ route('site.article.show', $articles[0]->slug)}}" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
 									{{ $articles[0]->title }}
 								</a>
 							</h3>
@@ -76,15 +76,15 @@
                         @if(isset($articles[1]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[1]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $articles[1]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+								<a href="{{ route('site.article.show', $articles[1]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $articles[1]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="{{ route('site.article.show', $articles[1]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										{{ $articles[1]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $articles[1]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<a href="{{ route('site.article.show', $articles[1]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
 											{{ $articles[1]->title }}
 										</a>
 									</h3>
@@ -96,15 +96,15 @@
 						@if(isset($articles[2]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[2]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $articles[2]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+								<a href="{{ route('site.article.show', $articles[2]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $articles[2]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="{{ route('site.article.show', $articles[2]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										{{ $articles[2]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $articles[2]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<a href="{{ route('site.article.show', $articles[2]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
 											{{ $articles[2]->title }}
 										</a>
 									</h3>
@@ -115,15 +115,15 @@
 						@if(isset($articles[3]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[3]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $articles[3]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+								<a href="{{ route('site.article.show', $articles[3]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $articles[3]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="{{ route('site.article.show', $articles[3]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										{{ $articles[3]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $articles[3]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<a href="{{ route('site.article.show', $articles[3]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
 											{{ $articles[3]->title }}
 										</a>
 									</h3>
@@ -134,15 +134,15 @@
 						@if(isset($articles[4]))
 						<div class="col-sm-6 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-14 how1 pos-relative" style="background-image: url({{ asset('storage/' . $articles[4]->thumbnail) }});">
-								<a href="{{ route('site.blog-detail-01', $articles[4]->slug)}}" class="dis-block how1-child1 trans-03"></a>
+								<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="{{ route('site.blog-detail-01', $articles[4]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										{{ $articles[4]->category->name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="{{ route('site.blog-detail-01', $articles[4]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<a href="{{ route('site.article.show', $articles[4]->slug)}}" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
 											{{ $articles[4]->title }}
 										</a>
 									</h3>
@@ -167,13 +167,13 @@
 							<!-- Item latest -->	
 							
 							<div class="m-b-45">
-								<a href="{{route('site.blog-detail-01', $article->slug)}}" class="wrap-pic-w hov1 trans-03">
+								<a href="{{route('site.article.show', $article->slug)}}" class="wrap-pic-w hov1 trans-03">
 									<img src="{{ asset('storage/' . $article->thumbnail) }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="{{ route('site.blog-detail-01', $article->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="{{ route('site.article.show', $article->slug)}}" class="f1-m-3 cl2 hov-cl10 trans-03">
 											{{ $article->title }}
 										</a>
 									</h5>
@@ -239,7 +239,7 @@
 										eng
 									</div>
 
-									<a href="{{ route('site.blog-detail-01', $post->slug)}}" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="{{ route('site.article.show', $post->slug)}}" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										{{ $post->title }}
 									</a>
 								</li>
@@ -250,8 +250,8 @@
 
 						<!--  -->
 						<div class="flex-c-s p-b-50">
-							<a href="">
-								<img class="max-w-full" src="images/banner-02.jpg" alt="IMG">
+							<a href="https://t.me/Amirdevv">
+								<img class="max-w-full" src="{{ asset('assets/images/banner-02.png') }}" alt="IMG">
 							</a>
 						</div>
 						

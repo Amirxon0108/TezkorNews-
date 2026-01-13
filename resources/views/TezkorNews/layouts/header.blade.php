@@ -246,12 +246,10 @@
 
         <div class="sub-mega-menu">
             <div class="nav flex-column nav-pills" role="tablist">
-                {{-- ID unikal bo'lishi shart --}}
                 <a class="nav-link active" data-toggle="pill" href="#header-cat-{{ $cat->id }}" role="tab">All</a>
             </div>
 
             <div class="tab-content">
-                {{-- Klassda 'fade show active' bo'lishi barcha kategoriyalar uchun ma'lumotni darhol ko'rsatadi --}}
                 <div class="tab-pane fade show active" id="header-cat-{{ $cat->id }}" role="tabpanel">
                     <div class="row">
                         @forelse($cat->articles as $article)
@@ -282,7 +280,7 @@
                             </div>
                         @empty
                             <div class="col-12 p-l-30">
-                                <p class="f1-s-1 cl8">Ushbu bo'limda ({{ $cat->name }}) hozircha maqolalar mavjud emas.</p>
+                                <p class="f1-s-1 cl8">Hozircha maqolalar mavjud emas.</p>
                             </div>
                         @endforelse
                     </div>

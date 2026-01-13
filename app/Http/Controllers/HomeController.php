@@ -47,13 +47,16 @@ class HomeController extends Controller
     {
         $article = Article::with(['category', 'author', 'comments'])->where('slug', $slug)->firstOrFail();
         
-        // Ko'rishlar sonini oshirish
         $article->increment('views_count');
-        
-        $comments = $article->comments()->where('is_approved', true)->latest()->get();
-        $mostPopular = Article::orderBy('views_count', 'desc')->take(5)->get();
 
-        return view('TezkorNews.blog-detail-01', compact('article', 'comments', 'mostPopular'));
+     
+        
+
+        $categories = category::withCount('articles')->get();
+        $popularArticles = Article::orderBy('views_count', 'desc')->take(5)->get();
+        $comments = $article->comments()->where('is_approved', true)->latest()->get();
+
+        return view('TezkorNews.blog-detail-01', compact('article', 'comments', 'categories', 'popularArticles','soni'));
     }
 
 

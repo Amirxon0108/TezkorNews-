@@ -516,7 +516,7 @@
 
 						<!--  -->
 						<div class="flex-c-s p-t-8">
-							<a href="#">
+							<a href="https://t.me/Amirdevv">
 								<img class="max-w-full" src="{{ asset('assets/images/banner-02.png') }}" alt="IMG">
 							</a>
 						</div>

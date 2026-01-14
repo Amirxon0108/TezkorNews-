@@ -23,7 +23,8 @@ class AppServiceProvider extends ServiceProvider
     {
      View::composer('TezkorNews.layouts.header', function($view){
         $categories = category::all();
-        $categories->each(function($category){
+       
+         $categories->each(function($category){
         $category->setRelation('articles',
         $category->articles()->latest()->take(4)->get()
         );

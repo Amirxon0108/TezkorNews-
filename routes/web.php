@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReklamalarController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EmailsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +36,9 @@ Route::post('/user-logout', [WebController::class, 'user_logout'])->name('user.l
 Route::name('site.')->group(function () {
     
    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+    Route::post('/', [EmailsController::class, 'store'])->name('email.store');
 
+    Route::get('/search', [HomeController::class, 'search'])->name('site.search.result');
     // Batafsil ko'rish sahifasi (Slug bo'yicha)
     Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');  
     Route::post('/comment/store', [CommentsController::class, 'store'])->name('comment.store');
@@ -96,5 +99,4 @@ Route::post('/dashboard/login', [\App\Http\Controllers\Auth\AuthenticatedSession
 
 // ADMIN LOGOUT
 Route::post('/dashboard/logout', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
-
 

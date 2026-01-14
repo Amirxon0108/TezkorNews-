@@ -29,10 +29,12 @@
 			</div>
 
 			<div class="pos-relative size-a-2 bo-1-rad-22 of-hidden bocl11 m-tb-6">
+				<form action="{{route('site.site.search.result')}}" method="GET">
 				<input class="f1-s-1 cl6 plh9 s-full p-l-25 p-r-45" type="text" name="search" placeholder="Search">
 				<button class="flex-c-c size-a-1 ab-t-r fs-20 cl2 hov-cl10 trans-03">
 					<i class="zmdi zmdi-search"></i>
 				</button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -248,26 +250,16 @@
 							</div>
 
 							<ul class="p-t-32">
+								
+								@foreach ($data as $cat)
 								<li class="p-rl-4 p-b-19">
 									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
 										<span>
-											July 2018
+											{{$cat->month}}
 										</span>
 
 										<span>
-											(9)
-										</span>
-									</a>
-								</li>
-								@foreach ($categories as $cat)
-								<li class="p-rl-4 p-b-19">
-									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
-										<span>
-											{{$cat->created_at->format('M d, Y')}}
-										</span>
-
-										<span>
-											({{$cat->articles_count}})
+											({{$cat->total}})
 										</span>
 									</a>
 								</li>
@@ -288,19 +280,19 @@
 							<ul class="p-t-35">
 								@foreach($popularArticles as $pop)
 <li class="flex-wr-sb-s p-b-30">
-    <a href="" class="size-w-10 wrap-pic-w hov1 trans-03">
+    <a href="{{ route('site.article.show', $pop->slug) }}" class="size-w-10 wrap-pic-w hov1 trans-03">
         
         <img src="{{ asset('storage/' . $pop->thumbnail) }}" alt="{{ $pop->title }}">
     </a>
 
     <div class="size-w-11">
         <h6 class="p-b-4">
-            <a href="" class="f1-s-5 cl3 hov-cl10 trans-03">
+            <a href="{{ route('site.article.show', $pop->slug) }}" class="f1-s-5 cl3 hov-cl10 trans-03">
                 {{ $pop->title }}
             </a>
         </h6>
 		<span class="cl8 txt-center p-b-24">
-											<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+											<a href="{{ route('site.article.show', $pop->slug) }}	" class="f1-s-6 cl8 hov-cl10 trans-03">
 												{{ $pop->category->name }}
 											</a>
 

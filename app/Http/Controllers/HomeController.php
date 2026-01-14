@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\category;
-
+use Carbon\Carbon;
 class HomeController extends Controller
 {
    public function index()
@@ -47,21 +47,29 @@ class HomeController extends Controller
     {
         $article = Article::with(['category', 'author', 'comments'])->where('slug', $slug)->firstOrFail();
         
+         $data = Article::selectRaw("DATE_FORMAT(created_at, '%M %Y') as month, COUNT(*) as total")->where('created_at', '>=', Carbon::now()->subMonths(5)->startOfMonth())->groupBy('month')->latest()->limit(5)->get();
         $article->increment('views_count');
-
-     
-        
-
         $categories = category::withCount('articles')->get();
         $popularArticles = Article::orderBy('views_count', 'desc')->take(5)->get();
         $comments = $article->comments()->where('is_approved', true)->latest()->get();
 
-        return view('TezkorNews.blog-detail-01', compact('article', 'comments', 'categories', 'popularArticles','soni'));
+        return view('TezkorNews.blog-detail-01', compact('article', 'comments', 'categories', 'popularArticles', 'data'));
     }
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
 
+        $articles = Article::with(['category', 'author'])
+        ->where('status', 'published')
+        ->where(function($query) use ($search)
+        {$query->where('title','like', "%{$search}%")
+        ->orWhere('body', 'like', "%{$search}%")
+        ->orWhere('excerpt', 'like', "%{$search}%");})
+        ->latest()->paginate(10);                                        
 
-
-//Header return view('TezkorNews.layouts.header', compact('moliya'));
+        $mostPopular= Article::orderBy('views_count', 'desc')->latest()->take(5)->get();
+        return view('TezkorNews.pages.search_result', compact('articles', 'mostPopular'));
+            }
 
  
 

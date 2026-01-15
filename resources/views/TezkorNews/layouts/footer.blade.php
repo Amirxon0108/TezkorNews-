@@ -11,34 +11,30 @@
 						</div>
 
 						<div>
-							<p class="f1-s-1 cl11 p-b-16">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor magna eget elit efficitur, at accumsan sem placerat. Nulla tellus libero, mattis nec molestie at, facilisis ut turpis. Vestibulum dolor metus, tincidunt eget odio
-							</p>
+							<h3 class="f1-s-1 cl11 p-b-25">
+								Bu sayt yangiliklarni yuklash uchun va amaliyot (CV portfolio) uchun <a href="https://t.me/amirdevv">Amirxon</a> tomonidan yaratildi.
+</h3>
 
 							<p class="f1-s-1 cl11 p-b-16">
-								Any questions? Call us on (+1) 96 716 6879
+								Savol bormi? Biz bilan bog'laning (+998) 94 768 7008
 							</p>
 
 							<div class="p-t-15">
-								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-									<span class="fab fa-facebook-f"></span>
+								<a href="https://t.me/amirdevv" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-telegram"></span>
 								</a>
 
-								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-									<span class="fab fa-twitter"></span>
+								<a href="https://www.linkedin.com/in/amir-matchanov-bb2234396/" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-linkedin"></span>
 								</a>
 
-								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-									<span class="fab fa-pinterest-p"></span>
+								<a href="https://github.com/Amirxon0108" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-github"></span>
 								</a>
 
-								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-									<span class="fab fa-vimeo-v"></span>
-								</a>
-
-								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-									<span class="fab fa-youtube"></span>
-								</a>
+								<a href="https://instagram.com/amirkhan_e17" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-instagram"></span>
+								</a>							
 							</div>
 						</div>
 					</div>
@@ -120,52 +116,20 @@
 						</div>
 
 						<ul class="m-t--12">
+							@foreach( $categories as $category)
 							<li class="how-bor1 p-rl-5 p-tb-10">
 								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Fashion (22)
+									{{ $category->name }}({{ $category->articles_count }})
 								</a>
 							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Technology (29)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Street Style (15)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Life Style (28)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									DIY & Crafts (16)
-								</a>
-							</li>
+							@endforeach
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="bg11">
-			<div class="container size-h-4 flex-c-c p-tb-15">
-				<span class="f1-s-1 cl0 txt-center">
-					Copyright © 2018 
-
-					<a href="#" class="f1-s-1 cl10 hov-link1"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</span>
-			</div>
-		</div>
+		
 	</footer>
 
 	<!-- Back to top -->

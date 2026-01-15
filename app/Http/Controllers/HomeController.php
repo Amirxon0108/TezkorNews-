@@ -22,6 +22,12 @@ class HomeController extends Controller
             'turizm'      => Article::with('category')->where('category_id', 8)->latest()->take(4)->get(),
             'biznes'      => Article::with('category')->where('category_id', 9)->latest()->take(4)->get(),
             'mostPopular' => Article::orderBy('views_count', 'desc')->take(5)->get(),
+          'categories' => category::withCount('articles')
+    ->orderByDesc('articles_count')
+    ->take(7)
+    ->get()
+
+
         ]);
     }
     

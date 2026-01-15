@@ -67,12 +67,22 @@
             @endauth
         </div>
 
-        <div class="right-topbar">
-            <a href="#"><span class="fab fa-facebook-f"></span></a>
-            <a href="#"><span class="fab fa-twitter"></span></a>
-            <a href="#"><span class="fab fa-pinterest-p"></span></a>
-            <a href="#"><span class="fab fa-vimeo-v"></span></a>
-            <a href="#"><span class="fab fa-youtube"></span></a>
+        <div class="right-topbar">        
+								<a href="https://t.me/amirdevv" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-telegram"></span>
+								</a>
+
+								<a href="https://www.linkedin.com/in/amir-matchanov-bb2234396/" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-linkedin"></span>
+								</a>
+
+								<a href="https://github.com/Amirxon0108" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-github"></span>
+								</a>
+
+								<a href="https://instagram.com/amirkhan_e17" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-instagram"></span>
+								</a>
         </div>
     </div>
 </div> 
@@ -127,80 +137,42 @@
 						</a>
 					</li>
 
-					<li class="right-topbar">
-						<a href="#">
-							<span class="fab fa-facebook-f"></span>
-						</a>
+					<div class="p-t-15">
+								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-telegram"></span>
+								</a>
 
-						<a href="#">
-							<span class="fab fa-twitter"></span>
-						</a>
+								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-linkedin"></span>
+								</a>
 
-						<a href="#">
-							<span class="fab fa-pinterest-p"></span>
-						</a>
+								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-github"></span>
+								</a>
 
-						<a href="#">
-							<span class="fab fa-vimeo-v"></span>
-						</a>
+								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-instagram"></span>
+								</a>
 
-						<a href="#">
-							<span class="fab fa-youtube"></span>
-						</a>
-					</li>
+								<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+									<span class="fab fa-telegram"></span>
+								</a>
+							</div>
 				</ul>
 
 				<ul class="main-menu-m">
 					<li>
 						<a href="{{ route('site.index') }}">Home</a>
-						<ul class="sub-menu-m">
-							<li><a href="{{ route('site.index') }}">Homepage v1</a></li>
-							<li><a href="">Homepage v2</a></li>
-							<li><a href="">Homepage v3</a></li>
-						</ul>
-
 						<span class="arrow-main-menu-m">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
 						</span>
 					</li>
-
+					@foreach( $header_categories as $cat)
 					<li>
-						<a href="{{ route('site.category.show', 'moliya') }}">Moliya</a>
+						<a href="{{ route('site.category.show', $cat->slug ) }}">{{ $cat->name }}</a>
 					</li>
-
-					<li>
-						<a href="{{ route('site.category.show', 'talim') }}">Ta'lim</a>
-					</li>
-
-					
-
-					<li>
-						<a href="{{ route('site.category.show', 'siyosat') }}">Siyosat</a>
-					</li>
-<li>
-						<a href="{{ route('site.category.show', 'biznes') }}">Biznes</a>
-					</li>
-					<li>
-						<a href="{{ route('site.category.show', 'jahon') }}">Jahon</a>
-					</li>
-
-					<li>
-						<a href="{{ route('site.category.show', 'jamiyat') }}">Jamiyat</a>
-					</li>
-
-					<li>
-						<a href="#">Features</a>
-						<ul class="sub-menu-m">
-							<li><a href="">Category Page v1</a></li>
-							<li><a href="">Category Page v2</a></li>
-							<li><a href="">Blog Grid Sidebar</a></li>
-							<li><a href="">Blog List Sidebar v1</a></li>
-							<li><a href="">Blog List Sidebar v2</a></li>
-							<li><a href="">Blog Detail Sidebar</a></li>
-							<li><a href="">Blog Detail No Sidebar</a></li>
-							<li><a href="{{ route('site.about') }}">About Us</a></li>
-							<li><a href="{{ route('site.contact') }}">Contact Us</a></li>
-						</ul>
+					@endforeach
+					</ul>
 
 						<span class="arrow-main-menu-m">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -213,7 +185,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="{{ asset('assets/images/icons/logo-01.png') }}" alt="LOGO"></a>
+					<a href=""><img src="{{ asset('assets/images/icons/logo-01.png') }}" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -234,11 +206,7 @@
 						<ul class="main-menu">
 							<li class="main-menu-active">
 								<a href="{{route('site.index')}}">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage v1</a></li>
-									<li><a href="home-02.html">Homepage v2</a></li>
-									<li><a href="home-03.html">Homepage v3</a></li>
-								</ul>
+							
 							</li>
 						@foreach($header_categories as $cat)
     <li class="mega-menu-item">
@@ -291,20 +259,7 @@
 @endforeach
 							
 							
-							<li>
-								<a href="#">Features</a>
-								<ul class="sub-menu">
-									<li><a href="{{ route('site.category.show', 'moliya') }}">Category Page v1</a></li>
-									<li><a href="{{ route('site.category.show', 'moliya') }}">Category Page v2</a></li>
-									<li><a href="{{ route('site.blog-grid') }}">Blog Grid `Sidebar`</a></li>
-									<li><a href="{{ route('site.blog-list-01') }}">Blog List Sidebar v1</a></li>
-									<li><a href="{{ route('site.blog-list-02') }}">Blog List Sidebar v2</a></li>
-									<li><a href="{{ route('site.blog-detail-01') }}">Blog Detail Sidebar</a></li>
-									<li><a href="{{ route('site.blog-detail-02') }}">Blog Detail No Sidebar</a></li>
-									<li><a href="{{ route('site.about') }}">About Us</a></li>
-									<li><a href="{{ route('site.contact') }}">Contact Us</a></li>
-								</ul>
-							</li>
+						
 						</ul>
 					</nav>
 				</div>

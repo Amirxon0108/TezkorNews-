@@ -11,7 +11,7 @@ class HomeController extends Controller
    public function index()
     {
         return view('index', [
-            'articles'    => Article::with(['category', 'author'])->latest()->take(12)->get(),
+            'articles'    => Article::with(relations: ['category', 'author'])->latest()->take(12)->get(),
             'ozbekison'   => Article::with('category')->where('category_id', 1)->latest()->take(4)->get(),
             'jahon'       => Article::with('category')->where('category_id', 2)->latest()->take(4)->get(),
             'siyosat'     => Article::with('category')->where('category_id', 3)->latest()->take(4)->get(),
@@ -21,13 +21,7 @@ class HomeController extends Controller
             'moliya'      => Article::with('category')->where('category_id', 7)->latest()->take(4)->get(),
             'turizm'      => Article::with('category')->where('category_id', 8)->latest()->take(4)->get(),
             'biznes'      => Article::with('category')->where('category_id', 9)->latest()->take(4)->get(),
-            'mostPopular' => Article::orderBy('views_count', 'desc')->take(5)->get(),
-          'categories' => category::withCount('articles')
-    ->orderByDesc('articles_count')
-    ->take(7)
-    ->get()
-
-
+            'mostPopular' => Article::orderBy('views_count', 'desc')->take(5)->get()
         ]);
     }
     
@@ -42,10 +36,13 @@ class HomeController extends Controller
             ->latest()
             ->paginate(15);
 
-        // Yon panel uchun mashhur maqolalar
+       
         $mostPopular = Article::orderBy('views_count', 'desc')->take(5)->get();
-
-        return view('TezkorNews.pages.category_show', compact('articles', 'category', 'mostPopular'));
+        $categories_footer = category::withCount('articles')
+    ->orderByDesc('articles_count')
+    ->take(7)
+    ->get();
+        return view('TezkorNews.pages.category_show', compact('articles','categories_footer', 'category', 'mostPopular'));
     }
 
     
@@ -56,10 +53,13 @@ class HomeController extends Controller
          $data = Article::selectRaw("DATE_FORMAT(created_at, '%M %Y') as month, COUNT(*) as total")->where('created_at', '>=', Carbon::now()->subMonths(5)->startOfMonth())->groupBy('month')->latest()->limit(5)->get();
         $article->increment('views_count');
         $categories = category::withCount('articles')->get();
-        $popularArticles = Article::orderBy('views_count', 'desc')->take(5)->get();
+        $mostPopular = Article::orderBy('views_count', 'desc')->take(5)->get();
         $comments = $article->comments()->where('is_approved', true)->latest()->get();
-
-        return view('TezkorNews.blog-detail-01', compact('article', 'comments', 'categories', 'popularArticles', 'data'));
+        $categories_footer = category::withCount('articles')
+    ->orderByDesc('articles_count')
+    ->take(7)
+    ->get();
+        return view('TezkorNews.pages.blog-detail-01', compact('article', 'categories_footer','comments', 'categories', 'mostPopular', 'data'));
     }
     public function search(Request $request)
     {
@@ -72,9 +72,9 @@ class HomeController extends Controller
         ->orWhere('body', 'like', "%{$search}%")
         ->orWhere('excerpt', 'like', "%{$search}%");})
         ->latest()->paginate(10);                                        
-
+        $categories_footer = category::withCount('articles')->orderByDesc('articles_count')->take(7)->get();
         $mostPopular= Article::orderBy('views_count', 'desc')->latest()->take(5)->get();
-        return view('TezkorNews.pages.search_result', compact('articles', 'mostPopular'));
+        return view('TezkorNews.pages.search_result', compact('articles', 'categories_footer','mostPopular'));
             }
 
  

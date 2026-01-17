@@ -111,14 +111,14 @@
 					<div class="col-sm-6 col-lg-4 p-b-20">
 						<div class="size-h-3 flex-s-c">
 							<h5 class="f1-m-7 cl0">
-								Category
+								Kategoriya
 							</h5>
 						</div>
 
 						<ul class="m-t--12">
-							@foreach( $categories as $categor)
+							@foreach( $categories_footer as $categor)
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="{{ route('site.category.show', $categor->slug)  }}" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									{{ $categor->name }}({{ $categor->articles_count }})
 								</a>
 							</li>

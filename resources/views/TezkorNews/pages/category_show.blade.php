@@ -8,12 +8,12 @@
 					Home 
 				</a>
 
-				<a href="" class="breadcrumb-item f1-s-3 cl9">
+				<a href="#" class="breadcrumb-item f1-s-3 cl9">
 					Category
 				</a>
 
 				<span class="breadcrumb-item f1-s-3 cl9">
-					articles
+					{{$category->name}}
 				</span>
 			</div>
 			
@@ -31,7 +31,7 @@
 	<!-- Page heading -->
 	<div class="container p-t-4 p-b-40">
 		<h2 class="f1-l-1 cl2">
-			articles
+			{{$category->name}}
 		</h2>
 	</div>
 		

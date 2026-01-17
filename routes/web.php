@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReklamalarController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailsController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +38,7 @@ Route::name('site.')->group(function () {
     
    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
     Route::post('/', [EmailsController::class, 'store'])->name('email.store');
-
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact');
     Route::get('/search', [HomeController::class, 'search'])->name('site.search.result');
     // Batafsil ko'rish sahifasi (Slug bo'yicha)
     Route::get('/article/{slug}', [App\Http\Controllers\HomeController::class, 'show'])->name('article.show');  

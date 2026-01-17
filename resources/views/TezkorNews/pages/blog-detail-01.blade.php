@@ -19,12 +19,12 @@
 					Home 
 				</a>
 
-				<a href="{{ route('site.blog-list-01') }}" class="breadcrumb-item f1-s-3 cl9">
+				<a href="#" class="breadcrumb-item f1-s-3 cl9">
 					Blog 
 				</a>
 
 				<span class="breadcrumb-item f1-s-3 cl9">
-					 Nulla non interdum metus non laoreet nisi tellus eget aliquam lorem pellentesque
+					 
 				</span>
 			</div>
 
@@ -95,47 +95,33 @@
 						</p>
 
 							<!-- Tag -->
-							<div class="flex-s-s p-t-12 p-b-15">
-								<span class="f1-s-12 cl5 m-r-8">
-									Tags:
-								</span>
-								
-								<div class="flex-wr-s-s size-w-0">
-									<a href="#" class="f1-s-12 cl8 hov-link1 m-r-15">
-										Streetstyle
-									</a>
-
-									<a href="#" class="f1-s-12 cl8 hov-link1 m-r-15">
-										Crafts
-									</a>
-								</div>
-							</div>
+							
 
 							<!-- Share -->
 							<div class="flex-s-s">
 								<span class="f1-s-12 cl5 p-t-1 m-r-15">
-									Share:
+									Ijtimoiy tarmoq kanallarimiz:
 								</span>
 								
 								<div class="flex-wr-s-s size-w-0">
-									<a href="#" class="dis-block f1-s-13 cl0 bg-facebook borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
+									<a href="https://www.facebook.com/kunuznews/" class="dis-block f1-s-13 cl0 bg-facebook borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
 										<i class="fab fa-facebook-f m-r-7"></i>
 										Facebook
 									</a>
 
-									<a href="#" class="dis-block f1-s-13 cl0 bg-twitter borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
-										<i class="fab fa-twitter m-r-7"></i>
-										Twitter
+									<a href="https://t.me/kunuzofficial" class="dis-block f1-s-13 cl0 bg-twitter borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
+										<i class="fab fa-telegram m-r-7"></i>
+										Telegram
 									</a>
 
-									<a href="#" class="dis-block f1-s-13 cl0 bg-google borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
+									<a href="https://kun.uz/" class="dis-block f1-s-13 cl0 bg-google borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
 										<i class="fab fa-google-plus-g m-r-7"></i>
 										Google+
 									</a>
 
-									<a href="#" class="dis-block f1-s-13 cl0 bg-pinterest borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
-										<i class="fab fa-pinterest-p m-r-7"></i>
-										Pinterest
+									<a href="https://youtube.com/@kunuz_official" class="dis-block f1-s-13 cl0 bg-pinterest borad-3 p-tb-4 p-rl-18 hov-btn1 m-r-3 m-b-3 trans-03">
+										<i class="fab fa-youtube m-r-7"></i>
+										YouTube
 									</a>
 								</div>
 							</div>
@@ -226,14 +212,14 @@
 						<div class="p-b-60">
 							<div class="how2 how2-cl4 flex-s-c">
 								<h3 class="f1-m-2 cl3 tab01-title">
-									Category	
+									Kategoriya	
 								</h3>
 							</div>
 
 							<ul class="p-t-35">
     @foreach($categories as $cat)
     <li class="how-bor3 p-rl-4">
-        <a href="" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+        <a href="{{ route('site.category.show', $cat->slug) }}" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
             {{ $cat->name }} ({{ $cat->articles_count }})
         </a>
     </li>
@@ -245,7 +231,7 @@
 						<div class="p-b-37">
 							<div class="how2 how2-cl4 flex-s-c">
 								<h3 class="f1-m-2 cl3 tab01-title">
-									Archive
+									Arxiv
 								</h3>
 							</div>
 
@@ -273,12 +259,12 @@
 						<div class="p-b-30">
 							<div class="how2 how2-cl4 flex-s-c">
 								<h3 class="f1-m-2 cl3 tab01-title">
-									Popular Post
+									Eng ko'p ko'rilgan
 								</h3>
 							</div>
 
 							<ul class="p-t-35">
-								@foreach($popularArticles as $pop)
+								@foreach($mostPopular as $pop)
 <li class="flex-wr-sb-s p-b-30">
     <a href="{{ route('site.article.show', $pop->slug) }}" class="size-w-10 wrap-pic-w hov1 trans-03">
         

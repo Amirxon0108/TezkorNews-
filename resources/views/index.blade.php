@@ -182,9 +182,9 @@
 								</ul>
 
 								<!--  -->
-								<a href="" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
-									Ko'proq
+								<a href="{{ route('site.category.show', ['slug' => 'siyosat']) }}" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
 									<i class="fs-12 m-l-5 fa fa-caret-right"></i>
+									Ko'proq
 								</a>
 							</div>
 								
@@ -298,8 +298,8 @@
 								</ul>
 
 								<!--  -->
-								<a href="category-01.html" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
-									View all
+								<a href="{{ route('site.category.show', ['slug' => 'ta\'lim']) }}" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
+									Ko'proq
 									<i class="fs-12 m-l-5 fa fa-caret-right"></i>
 								</a>
 							</div>
@@ -411,8 +411,8 @@
 								</ul>
 
 								<!--  -->
-								<a href="category-01.html" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
-									View all
+								<a href="{{ route('site.category.show', ['slug' => 'moliya']) }}" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
+									Ko'proq
 									<i class="fs-12 m-l-5 fa fa-caret-right"></i>
 								</a>
 							</div>

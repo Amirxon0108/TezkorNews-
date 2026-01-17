@@ -15,6 +15,6 @@ class EmailsController extends Controller
         $email = Email::create([
             'email' => $request->email
         ]);
-     return back()->with('esuccess', 'Obuna bo\'ldingiz raxmat!');
+     return back()->with('esuccess', 'Obuna bo\'ldingiz raxmat! ');
     }
 }
